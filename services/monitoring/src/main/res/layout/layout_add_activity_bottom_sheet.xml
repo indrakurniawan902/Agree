@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="?attr/spacing4"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/spacing4"
+        android:layout_marginTop="?attr/spacing4"
+        android:text="@string/label_livestock_activation"
+        android:textAppearance="?attr/bodySmallBold"
+        app:layout_constraintEnd_toStartOf="@+id/ivClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="?attr/spacing4"
+        android:contentDescription="@string/label_close_button"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <com.telkom.legion.component.dividers.LgnDivider
+        android:id="@+id/lgnDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvDetailActivityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/spacing4"
+        android:text="@string/placeholder_title_add_date_activity"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:textAppearance="?attr/bodySmallSemiBold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lgnDivider" />
+
+    <TextView
+        android:id="@+id/tvDescDetailActivityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/spacing4"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/label_desc_activation_live_stock"
+        android:textAppearance="?attr/bodySmallRegular"
+        android:textColor="@color/black_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailActivityName" />
+    <com.telkom.legion.component.textfield.LgnCalendarField
+        android:id="@+id/etCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dateFormat="FULL_DATE"
+        android:hint="@string/label_date_activation"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:placeholderText="@string/placeholder_add_date"
+        app:layout_constraintTop_toBottomOf="@id/tvDescDetailActivityName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.telkom.legion.component.button.fill.LgnPrimaryFitButton
+        android:id="@+id/btnAddActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?attr/spacing4"
+        android:text="@string/label_activate_the_livestock"
+        app:layout_constraintTop_toBottomOf="@id/etCalendar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

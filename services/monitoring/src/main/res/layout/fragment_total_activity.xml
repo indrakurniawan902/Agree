@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.telkom.legion.component.viewstate.LgnViewState
+        android:id="@+id/msvTotalActivitySop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:errorView="@layout/layout_error_total_activities"
+        app:loadingView="@layout/layout_shimmer_total_activity"
+        app:viewState="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCompleted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?attr/spacing4"
+                android:layout_marginEnd="?attr/spacing2"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toStartOf="@id/cvMissed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/primary_500"
+                app:strokeWidth="@dimen/dimen_1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_100"
+                    android:padding="@dimen/dimen_8dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerTotalActivityDone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvActivityDone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="?attr/spacing1"
+                            android:textAppearance="?attr/bodyLargeBold"
+                            android:textColor="?attr/colorPrimary_hover"
+                            app:layout_constraintEnd_toStartOf="@id/tvActivityDoneTotal"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="4" />
+
+                        <TextView
+                            android:id="@+id/tvActivityDoneTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="?attr/spacing1"
+                            android:textAppearance="?attr/bodyLargeRegular"
+                            android:textColor="?attr/colorPrimary_hover"
+                            app:layout_constraintStart_toEndOf="@id/tvActivityDone"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="/100" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        android:gravity="center"
+                        android:text="@string/label_activity_done"
+                        android:textAlignment="center"
+                        android:textAppearance="?attr/captionLargeRegular"
+                        android:textColor="?attr/colorPrimary_hover"
+                        android:textSize="@dimen/dimen_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/containerTotalActivityDone" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvMissed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?attr/spacing2"
+                android:layout_marginEnd="?attr/spacing4"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvCompleted"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/error_400"
+                app:strokeWidth="@dimen/dimen_1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/error_200"
+                    android:padding="@dimen/dimen_8dp">
+
+                    <TextView
+                        android:id="@+id/tvActivityMissed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="?attr/spacing1"
+                        android:textAppearance="?attr/bodyLargeBold"
+                        android:textColor="?attr/error_hover"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        android:gravity="center"
+                        android:text="@string/label_miss"
+                        android:textAlignment="center"
+                        android:textColor="?attr/error_hover"
+                        android:textSize="@dimen/dimen_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvActivityMissed" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.telkom.legion.component.viewstate.LgnViewState>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/dimen_16dp">
+
+        <TextView
+            android:id="@+id/tvVesselName"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/label_vessel" />
+
+        <TextView
+            android:id="@+id/tvLocationArea"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/black_700"
+            app:layout_constraintEnd_toEndOf="@+id/tvVesselName"
+            app:layout_constraintStart_toStartOf="@+id/tvVesselName"
+            app:layout_constraintTop_toBottomOf="@+id/tvVesselName"
+            tools:text="Garut, 200Ha" />
+
+        <TextView
+            android:id="@+id/tvSeeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginVertical="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="@string/label_see_detail"
+            android:textAppearance="@style/BodySmallSemiBold"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLocationArea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvVesselName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

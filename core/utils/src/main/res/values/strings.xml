@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_message_app">Terjadi masalah pada aplikasi!</string>
+    <string name="label_title_logout_dialog">Sesi Telah Berakhir</string>
+    <string name="label_message_logout_dialog">Silahkan masuk kembali untuk melanjutkan\naktivitas anda</string>
+    <string name="label_title_connection_dialog">Koneksi Internet Anda Terputus</string>
+    <string name="label_message_connection_dialog">Silakan cek koneksi internet seluler atau wi-fi\nAnda kemudian coba lagi</string>
+    <string name="label_dialog_login">Masuk</string>
+    <string name="label_goto_settings">Masuk ke Pengaturan</string>
+    <string name="label_internal_server_error">Saat ini server sedang sibuk, coba lagi nanti!</string>
+    <string name="label_province">Provinsi</string>
+    <string name="label_smartfarming">Smart Farming</string>
+    <string name="label_filter">Filter</string>
+    <string name="placeholder_province">Pilih Provinsi Anda</string>
+    <string name="placeholder_village">Pilih Desa/Kelurahan anda</string>
+    <string name="label_sub_district">Kecamatan</string>
+    <string name="placeholder_sub_district">Pilih Kecamatan anda</string>
+    <string name="label_district">Kabupaten/Kota</string>
+    <string name="placeholder_district">Pilih Kabupaten/Kota anda</string>
+    <string name="error_rule_province">Provinsi belum dipilih</string>
+    <string name="error_rule_district">Kabupaten/Kota belum dipilih</string>
+    <string name="error_rule_sub_district">Kecamatan belum dipilih</string>
+    <string name="error_rule_village">Desa belum dipilih</string>
+    <string name="error_rule_gender">Jenis Kelamin tidak boleh kosong!</string>
+    <string name="label_village">Desa</string>
+    <string name="label_select_all_subsector">Pilih Semua Sub Sektor</string>
+    <string name="action_apply">Terapkan</string>
+    <string name="label_sub_sector">Sub Sektor</string>
+    <string name="label_all_subsector">Semua Sub Sektor</string>
+    <string name="error_load_subsector">Gagal memuat Sub Sektor</string>
+    <string name="error_desc_load_sub_sector">Terdapat kesalahan saat memuat data Sub Sektor, Silahkan coba lagi!</string>
+    <string name="label_try_again">Coba Lagi</string>
+    <string name="label_cs">Hubungi Customer Service</string>
+    <string name="label_cs_message">Anda akan dihubungkan untuk konsultasi dengan CS kami melalui WhatsApp</string>
+    <string name="action_continue">Lanjut</string>
+    <string name="label_failed_load_data_generic">Gagal Memuat Data</string>
+    <string name="label_desc_failed_load_data_generic">Terjadi kesalahan dalam memuat data, silakan muat ulang kembali</string>
+    <string name="action_retry">Muat Ulang</string>
+    <string name="label_select_time">PILIH JAM</string>
+    <string name="action_back">Kembali</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dimen_4dp"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@android:color/transparent"
+    app:strokeColor="?attr/black_100"
+    app:strokeWidth="@dimen/dimen_1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/viewSectorColor"
+            android:layout_width="@dimen/dimen_8dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:background="@color/primary_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSectorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="?attr/black"
+            app:layout_constraintStart_toEndOf="@id/viewSectorColor"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Pertanian" />
+
+        <TextView
+            android:id="@+id/tvSubSectorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="?attr/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvSectorName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Holtikultura" />
+
+        <TextView
+            android:id="@+id/tvLabelCommodities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:text="@string/label_commodities"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/black_font"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSectorName"
+            app:layout_constraintTop_toBottomOf="@id/tvSectorName" />
+
+        <TextView
+            android:id="@+id/tvCommodities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/info_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSectorName"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCommodities"
+            tools:text="Daun Bawang, Bawang Merah" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

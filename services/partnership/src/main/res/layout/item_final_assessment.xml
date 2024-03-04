@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/black_25">
+
+    <View
+        android:id="@+id/viewSectorColor"
+        android:layout_width="@dimen/dimen_8dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:background="@color/primary_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubVessel"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginEnd="8dp"
+        android:maxLines="2"
+        android:textAppearance="?attr/captionLargeSemiBold"
+        android:textColor="?attr/black"
+        app:layout_constraintBottom_toBottomOf="@id/cvStatus"
+        app:layout_constraintEnd_toStartOf="@id/cvStatus"
+        app:layout_constraintStart_toEndOf="@id/viewSectorColor"
+        app:layout_constraintTop_toTopOf="@id/cvStatus"
+        tools:text="Lahan Daun Bawang (50Ha) tes kalau panjang gimna guys" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        app:cardBackgroundColor="?attr/error_100"
+        app:cardCornerRadius="@dimen/dimen_45dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12dp"
+            android:layout_marginVertical="@dimen/dimen_6dp"
+            android:textAppearance="?attr/captionSmallRegular"
+            android:textColor="?attr/error_pressed"
+            tools:text="Dibatalkan" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCommodityInfo"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:paddingBottom="@dimen/dimen_8dp"
+        app:layout_constraintEnd_toEndOf="@id/cvStatus"
+        app:layout_constraintStart_toStartOf="@id/tvSubVessel"
+        app:layout_constraintTop_toBottomOf="@id/tvSubVessel">
+
+        <TextView
+            android:id="@+id/tvLabelCommodities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:text="@string/label_commodities"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/black_font"
+            app:layout_constraintEnd_toStartOf="@+id/tvLabelOfftakerName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLabelOfftakerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:text="@string/label_worker_name"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/black_font"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelCommodities"
+            app:layout_constraintTop_toTopOf="@id/tvLabelCommodities" />
+
+        <TextView
+            android:id="@+id/tvCommodities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/info_normal"
+            app:layout_constraintEnd_toEndOf="@id/tvLabelCommodities"
+            app:layout_constraintStart_toStartOf="@id/tvLabelCommodities"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCommodities"
+            tools:text="Daun Bawang" />
+
+        <TextView
+            android:id="@+id/tvOfftakerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/info_normal"
+            app:layout_constraintEnd_toEndOf="@id/tvLabelOfftakerName"
+            app:layout_constraintStart_toStartOf="@id/tvLabelOfftakerName"
+            app:layout_constraintTop_toTopOf="@id/tvCommodities"
+            tools:text="Ahmad Sudrajat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/layout_rejected_reason"
+        layout="@layout/layout_rejected_reason"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/cvStatus"
+        app:layout_constraintStart_toStartOf="@id/tvSubVessel"
+        app:layout_constraintTop_toBottomOf="@id/clCommodityInfo"
+        tools:visibility="visible" />
+
+    <com.telkom.legion.component.dividers.LgnDivider
+        android:id="@+id/viewDivider"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

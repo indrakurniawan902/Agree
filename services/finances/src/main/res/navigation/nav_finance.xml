@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_finance"
+    app:startDestination="@id/financeFragment">
+    <fragment
+        android:id="@+id/financeFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.FinanceFragment"
+        android:label="fragment_finance"
+        tools:layout="@layout/fragment_finance" >
+        <action
+            android:id="@+id/action_financeFragment_to_detailLoanPackageFragment2"
+            app:destination="@id/detailLoanPackageFragment" />
+        <argument
+            android:name="initTab"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_financeFragment_to_loanActiveDetailFragment"
+            app:destination="@id/loanActiveDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailLoanPackageFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.loanpackage.detail.DetailLoanPackageFragment"
+        android:label="fragment_detail_loan_package"
+        tools:layout="@layout/fragment_detail_loan_package" >
+        <argument
+            android:name="loanPackageId"
+            app:argType="string" />
+        <argument
+            android:name="companyId"
+            app:argType="string" />
+        <argument
+            android:name="mitraId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanActiveDetailFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.loanactive.detail.LoanActiveDetailFragment"
+        android:label="fragment_loan_active_detail"
+        tools:layout="@layout/fragment_loan_active_detail" />
+</navigation>

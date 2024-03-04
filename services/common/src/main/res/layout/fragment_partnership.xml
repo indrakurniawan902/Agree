@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.telkom.legion.component.viewstate.LgnViewState
+            android:id="@+id/msvPartnership"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            app:emptyView="@layout/layout_empty_partnership"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:loadingView="@layout/layout_shimmer_companies"
+            app:viewState="empty"
+            tools:viewState="content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnStatusRegister"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    app:layout_constraintEnd_toStartOf="@id/cvFilter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="?attr/info_normal"
+                    app:strokeWidth="@dimen/dimen_2dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_chevron"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="?attr/info_normal" />
+
+                        <TextView
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_check_register_partnership"
+                            android:textAppearance="?attr/bodySmallSemiBold"
+                            android:textColor="?attr/info_normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    app:cardCornerRadius="@dimen/dimen_6dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/btnStatusRegister"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/btnStatusRegister"
+                    app:strokeColor="?attr/black_600"
+                    app:strokeWidth="@dimen/dimen_1dp">
+
+                    <ImageView
+                        android:id="@+id/ivFilter"
+                        android:layout_width="@dimen/dimen_25dp"
+                        android:layout_height="@dimen/dimen_25dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dimen_12dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_filter" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.telkom.legion.component.chips.small.LgnSecondarySmallChipContainer
+                    android:id="@+id/cgSubSectors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:visibility="gone"
+                    app:chipType="DEFAULT_TYPE"
+                    app:closeIconVisible="true"
+                    app:isSingleLine="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnStatusRegister" />
+
+                <com.telkom.legion.component.textfield.LgnDropdownField
+                    android:id="@+id/etSubSector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_sub_sector"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnStatusRegister" />
+
+                <TextView
+                    android:id="@+id/tvAddPartnership"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:text="@string/action_add_partnership"
+                    android:textAppearance="?attr/bodySmallBold"
+                    android:textColor="?attr/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/textView" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/label_your_partnership_company"
+                    android:textAppearance="?attr/bodySmallBold"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAddPartnership"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cgSubSectors" />
+
+                <com.telkom.legion.component.viewstate.LgnViewState
+                    android:id="@+id/msvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:emptyView="@layout/layout_empty_partnership_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPartnership"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:padding="@dimen/dimen_16dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_company_partner" />
+
+                </com.telkom.legion.component.viewstate.LgnViewState>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.telkom.legion.component.viewstate.LgnViewState>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

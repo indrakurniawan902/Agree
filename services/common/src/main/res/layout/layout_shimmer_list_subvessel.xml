@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dimen_12dp"
+    android:paddingVertical="@dimen/dimen_8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvStatus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cvStatus" />
+
+                <View
+                    android:id="@+id/cvStatus"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                <View
+                    android:id="@+id/tvLabelDistrictName"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelWorkerName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvStatus" />
+
+                <TextView
+                    android:id="@+id/tvLabelWorkerName"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelCompanyName"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelDistrictName"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName" />
+
+                <TextView
+                    android:id="@+id/tvLabelCompanyName"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/cvStatus"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelWorkerName"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelDistrictName"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelDistrictName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelDistrictName" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelWorkerName"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelWorkerName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelWorkerName" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelCompanyName"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelCompanyName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelCompanyName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvStatus2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cvStatus2" />
+
+                <View
+                    android:id="@+id/cvStatus2"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                <View
+                    android:id="@+id/tvLabelDistrictName2"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelWorkerName2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvStatus2" />
+
+                <TextView
+                    android:id="@+id/tvLabelWorkerName2"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelCompanyName2"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelDistrictName2"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName2" />
+
+                <TextView
+                    android:id="@+id/tvLabelCompanyName2"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/cvStatus2"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelWorkerName2"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName2" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelDistrictName2"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelDistrictName2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelDistrictName2" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelWorkerName2"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelWorkerName2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelWorkerName2" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelCompanyName2"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelCompanyName2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelCompanyName2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvStatus4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cvStatus4" />
+
+                <View
+                    android:id="@+id/cvStatus4"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                <View
+                    android:id="@+id/tvLabelDistrictName4"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelWorkerName4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvStatus4" />
+
+                <TextView
+                    android:id="@+id/tvLabelWorkerName4"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelCompanyName4"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelDistrictName4"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName4" />
+
+                <TextView
+                    android:id="@+id/tvLabelCompanyName4"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/cvStatus4"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelWorkerName4"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName4" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelDistrictName4"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelDistrictName4"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelDistrictName4" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelWorkerName4"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelWorkerName4"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelWorkerName4" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelCompanyName4"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelCompanyName4"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelCompanyName4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvStatus5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cvStatus5" />
+
+                <View
+                    android:id="@+id/cvStatus5"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                <View
+                    android:id="@+id/tvLabelDistrictName5"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelWorkerName5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvStatus5" />
+
+                <TextView
+                    android:id="@+id/tvLabelWorkerName5"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelCompanyName5"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelDistrictName5"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName5" />
+
+                <TextView
+                    android:id="@+id/tvLabelCompanyName5"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/cvStatus5"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelWorkerName5"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName5" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelDistrictName5"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelDistrictName5"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelDistrictName5" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelWorkerName5"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelWorkerName5"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelWorkerName5" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelCompanyName5"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelCompanyName5"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelCompanyName5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/dimen_150dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvStatus3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cvStatus3" />
+
+                <View
+                    android:id="@+id/cvStatus3"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                <View
+                    android:id="@+id/tvLabelDistrictName3"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelWorkerName3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvStatus3" />
+
+                <TextView
+                    android:id="@+id/tvLabelWorkerName3"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelCompanyName3"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelDistrictName3"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName3" />
+
+                <TextView
+                    android:id="@+id/tvLabelCompanyName3"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/cvStatus3"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelWorkerName3"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelDistrictName3" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelDistrictName3"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelDistrictName3"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelDistrictName3" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelWorkerName3"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelWorkerName3"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelWorkerName3" />
+
+                <TextView
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelCompanyName3"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelCompanyName3"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelCompanyName3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/dimen_48dp"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_64dp"
+        android:src="@drawable/ic_sad" />
+
+    <TextView
+        android:id="@+id/tvTitleEmptyPartnership"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/error_load_subsector"
+        android:textAlignment="center"
+        android:textAppearance="?attr/bodySmallBold" />
+
+    <TextView
+        android:id="@+id/tvDescEmptyPartnership"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/error_desc_load_sub_sector"
+        android:textAlignment="center"
+        android:textAppearance="@style/CaptionLargeRegular" />
+
+    <com.telkom.legion.component.button.fill.LgnPrimaryFitButton
+        android:id="@+id/btnTryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:text="@string/label_try_again" />
+
+</LinearLayout>

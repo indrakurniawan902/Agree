@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.base.activity.statusregister.StatusRegisterActivity">
+
+    <com.telkom.legion.component.toolbar.LgnToolbarWhite
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_registration_status" />
+
+    <com.telkom.legion.component.viewstate.LgnViewState
+        android:id="@+id/msvRegistrationStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:emptyView="@layout/layout_empty_registration_status"
+        app:loadingView="@layout/layout_shimmer_registration_status"
+        app:viewState="content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimen_8dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_registration_status" />
+
+    </com.telkom.legion.component.viewstate.LgnViewState>
+
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/containerContentShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerDetailShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/dimen_20dp"
+            android:paddingTop="@dimen/dimen_20dp"
+            android:paddingEnd="@dimen/dimen_20dp"
+            android:paddingBottom="@dimen/dimen_30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/viewGuidelineVerticalShimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.93" />
+
+            <View
+                android:id="@+id/viewHeader"
+                android:layout_width="@dimen/dimen_128dp"
+                android:layout_height="@dimen/dimen_48dp"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerBodyShimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/viewGuidelineVerticalShimmer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewHeader">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvRealization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/grey_100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_10dp">
+
+                        <View
+                            android:id="@+id/viewRealizationLabel"
+                            android:layout_width="@dimen/dimen_80dp"
+                            android:layout_height="@dimen/dimen_18dp"
+                            android:background="@drawable/bg_shimmer"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/viewRealization"
+                            android:layout_width="@dimen/dimen_192dp"
+                            android:layout_height="@dimen/dimen_25dp"
+                            android:background="@drawable/bg_shimmer"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/viewRealizationLabel"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/containerDateTimeShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cvRealization">
+
+                    <View
+                        android:id="@+id/viewDateTime"
+                        android:layout_width="@dimen/dimen_140dp"
+                        android:layout_height="@dimen/dimen_16dp"
+                        android:background="@drawable/bg_shimmer"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <View
+                        android:id="@+id/viewStatus"
+                        android:layout_width="@dimen/dimen_70dp"
+                        android:layout_height="@dimen/dimen_25dp"
+                        android:background="@drawable/bg_shimmer"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/containerSubmissionShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/containerDateTimeShimmer">
+
+                    <ImageView
+                        android:id="@+id/imgDottedSubmission"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_5dp"
+                        android:src="@drawable/bg_dotted"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/viewSubmission"
+                        android:layout_width="@dimen/dimen_150dp"
+                        android:layout_height="@dimen/dimen_25dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgDottedSubmission"/>
+
+                    <View
+                        android:id="@+id/viewBrutoLabel"
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewSubmission"/>
+
+                    <View
+                        android:id="@+id/viewBruto"
+                        android:layout_width="@dimen/dimen_50dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewBrutoLabel"/>
+
+                    <View
+                        android:id="@+id/viewDeliveryTypeSubmissionLabel"
+                        android:layout_width="@dimen/dimen_128dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewBruto"/>
+
+                    <View
+                        android:id="@+id/viewDeliveryTypeSubmission"
+                        android:layout_width="@dimen/dimen_80dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewDeliveryTypeSubmissionLabel"/>
+
+                    <View
+                        android:id="@+id/viewPriceOfferLabel"
+                        android:layout_width="@dimen/dimen_176dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewDeliveryTypeSubmission"/>
+
+                    <View
+                        android:id="@+id/viewPriceOffer"
+                        android:layout_width="@dimen/dimen_100dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewPriceOfferLabel"/>
+
+                    <View
+                        android:id="@+id/viewNoteSubmissionLabel"
+                        android:layout_width="@dimen/dimen_50dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewPriceOffer"/>
+
+                    <View
+                        android:id="@+id/viewNoteSubmission"
+                        android:layout_width="@dimen/dimen_256dp"
+                        android:layout_height="@dimen/dimen_18dp"
+                        android:background="@drawable/bg_shimmer"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewNoteSubmissionLabel"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/containerWatermarkShimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.facebook.shimmer.ShimmerFrameLayout>

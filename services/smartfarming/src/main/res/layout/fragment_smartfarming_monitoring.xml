@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".presentation.menu.monitoring.MonitoringFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorTertiary_25"
+        android:orientation="vertical">
+
+        <com.telkom.legion.component.viewstate.LgnViewState
+            android:id="@+id/msvDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorView="@layout/layout_error_devices"
+            app:loadingView="@layout/layout_shimmer_devices"
+            app:viewState="loading"
+            tools:viewState="content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profileContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_16dp">
+
+                <com.telkom.legion.component.image.LgnImageView
+                    android:id="@+id/imgTools"
+                    android:layout_width="@dimen/dimen_32dp"
+                    android:layout_height="@dimen/dimen_32dp"
+                    android:radius="360dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="?attr/colorTertiary_200" />
+
+
+                <com.telkom.legion.component.button.ghost.LgnPrimaryGhostSmallButton
+                    android:id="@+id/btnChangeTools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primary_200"
+                    android:text="@string/title_change_tool"
+                    app:endIconDrawable="@drawable/ic_arrow_right_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgTools"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgTools" />
+
+
+                <TextView
+                    android:id="@+id/tvDeviceName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_12dp"
+                    android:textAppearance="?attr/captionLargeSemiBold"
+                    android:textColor="?attr/black"
+                    app:layout_constraintEnd_toStartOf="@+id/btnChangeTools"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@id/imgTools"
+                    app:layout_constraintTop_toTopOf="@+id/imgTools"
+                    tools:text="AQUIMOS" />
+
+                <TextView
+                    android:id="@+id/tvServiceName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:textAppearance="?attr/captionLargeRegular"
+                    android:textColor="?attr/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgTools"
+                    app:layout_constraintEnd_toStartOf="@+id/btnChangeTools"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@id/imgTools"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDeviceName"
+                    tools:text="Water Quality Monitoring" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.telkom.legion.component.viewstate.LgnViewState>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:strokeColor="?colorTertiary_300"
+            app:strokeWidth="@dimen/dimen_1dp"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12dp"
+                android:layout_marginVertical="@dimen/dimen_14dp">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/BodySmallSemiBold"
+                    android:textColor="?attr/colorTertiary_800"
+                    app:layout_constraintEnd_toStartOf="@id/tvTime"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="12 November 2023" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:textAppearance="@style/BodySmallSemiBold"
+                    android:textColor="?attr/colorTertiary_500"
+                    app:layout_constraintStart_toEndOf="@id/tvDate"
+                    app:layout_constraintTop_toTopOf="@id/tvDate"
+                    tools:text="(08 : 00)" />
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_calendar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvTestParameterLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:text="@string/test_parameters"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="?attr/colorTertiary_500" />
+
+        <com.telkom.legion.component.alert.LgnAlert
+            android:id="@+id/alertNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:visibility="gone"
+            app:alertType="ERROR"
+            app:isDismissible="false"
+            app:showIcon="false"
+            app:title="@string/label_title_alert_notification"
+            tools:description="@string/foo" />
+
+        <com.telkom.legion.component.viewstate.LgnViewState
+            android:id="@+id/msvParameterTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorView="@layout/layout_error_test_parameter"
+            app:loadingView="@layout/layout_shimmer_item_test_parameter"
+            app:viewState="loading"
+            tools:viewState="content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTestParameters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_test_parameter" />
+        </com.telkom.legion.component.viewstate.LgnViewState>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

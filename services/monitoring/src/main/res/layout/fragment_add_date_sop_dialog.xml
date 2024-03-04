@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/label_add_activity"
+        android:textAppearance="?attr/bodySmallBold"
+        app:layout_constraintEnd_toStartOf="@+id/ivClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:contentDescription="@string/label_close_button"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+    <TextView
+        android:id="@+id/tvDetailActivityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:text="@string/placeholder_title_add_date_activity"
+        android:textAppearance="?attr/bodySmallSemiBold"
+        android:textColor="@color/black_font"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvDescDetailActivityName"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_700"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:textAppearance="?attr/bodySmallRegular"
+        android:text="@string/placeholder_desc_add_date_activity"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailActivityName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <com.telkom.legion.component.textfield.LgnCalendarField
+        android:id="@+id/etCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dateFormat="FULL_DATE"
+        android:hint="@string/hint_add_date"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:placeholderText="@string/placeholder_add_date"
+        app:layout_constraintTop_toBottomOf="@id/tvDescDetailActivityName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.telkom.legion.component.button.fill.LgnPrimaryFitButton
+        android:id="@+id/btnAddActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:text="@string/action_save"
+        app:layout_constraintTop_toBottomOf="@id/etCalendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

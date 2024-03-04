@@ -1,0 +1,15 @@
+apply from: '../../ktlint.gradle'
+
+android {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    // Module Scope Dependencies
+    implementation project(":services:monitoring")
+    implementation project(":services:utilities")
+}
+
+check.dependsOn ktlint

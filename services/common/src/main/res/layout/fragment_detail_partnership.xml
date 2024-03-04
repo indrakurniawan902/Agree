@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.telkom.legion.component.toolbar.LgnToolbarWhite
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_detail_partnership"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.telkom.legion.component.viewstate.LgnViewState
+        android:id="@+id/msvDetailPartnership"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@id/cvFooter"
+        app:loadingView="@layout/layout_shimmer_detail_partnership"
+        app:viewState="content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingVertical="@dimen/dimen_10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvCompanyName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16dp"
+                        android:layout_marginVertical="@dimen/dimen_12dp">
+
+                        <com.telkom.legion.component.image.LgnImageView
+                            android:id="@+id/imgCompanyLogo"
+                            android:layout_width="@dimen/dimen_48dp"
+                            android:layout_height="@dimen/dimen_48dp"
+                            android:radius="@dimen/dimen_8dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imgCompanyLogo"
+                            app:layout_constraintTop_toTopOf="@+id/imgCompanyLogo"
+                            app:layout_constraintVertical_chainStyle="packed">
+
+                            <TextView
+                                android:id="@+id/tvCompanyName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?attr/bodySmallSemiBold"
+                                android:textColor="?attr/black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="PT. Poultry Chick Farm" />
+
+                            <TextView
+                                android:id="@+id/tvViewCompanyDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_4dp"
+                                android:background="?attr/selectableItemBackground"
+                                android:gravity="center_vertical"
+                                android:text="@string/label_view_company_details"
+                                android:textAppearance="?attr/bodySmallSemiBold"
+                                android:textColor="@color/primary_500"
+                                app:drawableEndCompat="@drawable/ic_chevron_right"
+                                app:drawableTint="@color/primary_500"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvCompanyName"
+                                app:layout_constraintVertical_chainStyle="packed" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.telkom.legion.component.dividers.LgnDivider
+                    android:id="@+id/view2"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cvCompanyName" />
+
+                <TextView
+                    android:id="@+id/tvInfoPartnership"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:text="@string/label_info_partnership"
+                    android:textAppearance="?attr/bodySmallSemiBold"
+                    android:textColor="?attr/black"
+                    app:layout_constraintEnd_toEndOf="@+id/cvCompanyName"
+                    app:layout_constraintStart_toStartOf="@+id/cvCompanyName"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSectors"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:layout_marginVertical="@dimen/dimen_4dp"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvInfoPartnership"
+                    app:layout_constraintStart_toStartOf="@id/tvInfoPartnership"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfoPartnership"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_detail_partnership" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.telkom.legion.component.viewstate.LgnViewState>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

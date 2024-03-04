@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginVertical="@dimen/dimen_5dp"
+	app:cardCornerRadius="@dimen/dimen_4dp"
+	app:cardElevation="0dp"
+	app:rippleColor="@android:color/transparent"
+	app:strokeColor="?attr/black_300"
+	app:strokeWidth="@dimen/dimen_1dp">
+
+	<TextView
+		android:id="@+id/tvCommodity"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/dimen_12dp"
+		android:textAppearance="?attr/bodySmallSemiBold"
+		android:textColor="?attr/black_font"
+		tools:text="Daun Bawang" />
+
+</com.google.android.material.card.MaterialCardView>

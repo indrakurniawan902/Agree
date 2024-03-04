@@ -1,0 +1,27 @@
+apply from: '../../ktlint.gradle'
+
+
+android {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation project(":services:utilities")
+    implementation project(":services:agreepedia")
+    implementation project(":services:users")
+    implementation project(":services:partnership")
+    implementation project(":services:monitoring")
+    implementation project(":services:auth")
+    implementation project(":services:finances")
+
+    implementation libs.bundles.room
+    ksp(libs.room.compiler)
+
+    //Pluto Debugger
+    debugImplementation libs.bundles.pluto
+    releaseImplementation libs.bundles.pluto.noop
+}
+
+check.dependsOn ktlint

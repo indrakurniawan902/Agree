@@ -1,0 +1,60 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven {
+            name "Legion"
+            url "https://gitlab.playcourt.id/api/v4/projects/17748/packages/maven"
+            credentials {
+                username getProperty("legion_username") ?: "developer"
+                password getProperty("legion_password") ?: "password"
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+        maven {
+            name "Nexus"
+            url "https://nexus.playcourt.id/repository/dev/"
+            credentials {
+                username getProperty("nexus_username") ?: "developer"
+                password getProperty("nexus_password") ?: "password"
+            }
+        }
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+rootProject.name = "Agree Ecosystem"
+include ':base'
+include ':core'
+include ':core:utils'
+include ':core:dependencies'
+include ':core:analytics'
+include ':core:ui'
+include ':apps:calc'
+include ':apps:prices'
+include ':apps:weather'
+include ':services'
+include ':services:monitoring'
+include ':services:partnership'
+include ':services:agreepedia'
+include ':services:utilities'
+include ':services:users'
+include ':core:locales'
+include ':services:finances'
+include ':services:splash'
+include ':services:auth'
+include ':services:common'
+include ':services:smartfarming'

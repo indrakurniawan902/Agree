@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_utilities"
+    app:startDestination="@id/aboutAgreeFragment">
+
+    <fragment
+        android:id="@+id/aboutAgreeFragment"
+        android:name="com.agree.ecosystem.utilities.presentation.menu.about.AboutAgreeFragment"
+        android:label="AboutAgreeFragment"/>
+    <fragment
+        android:id="@+id/termsConditionsFragment"
+        android:name="com.agree.ecosystem.utilities.presentation.menu.termsconditions.TermsConditionsFragment"
+        android:label="TermsConditionsFragment"/>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.agree.ecosystem.utilities.presentation.menu.help.HelpFragment"
+        android:label="HelpFragment" >
+        <action
+            android:id="@+id/action_helpFragment_to_detailHelpFragment"
+            app:destination="@id/detailHelpFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailHelpFragment"
+        android:name="com.agree.ecosystem.utilities.presentation.menu.help.detail.DetailHelpFragment"
+        android:label="DetailHelpFragment" >
+        <argument
+            android:name="content"
+            app:argType="string" />
+    </fragment>
+</navigation>

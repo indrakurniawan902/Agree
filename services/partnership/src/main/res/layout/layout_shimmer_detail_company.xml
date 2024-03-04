@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<com.google.android.material.card.MaterialCardView
+			android:id="@+id/cvCompanyName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:cardBackgroundColor="@color/colorWhite"
+			app:cardCornerRadius="0dp"
+			app:cardElevation="0dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/dimen_16dp"
+				android:layout_marginVertical="@dimen/dimen_12dp">
+
+				<View
+					android:id="@+id/shimmerImgCompanyLogo"
+					android:layout_width="@dimen/dimen_48dp"
+					android:layout_height="@dimen/dimen_48dp"
+					android:background="@drawable/bg_shimmer_oval"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<View
+					android:id="@+id/shimmerCompanyNameLabel"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_16dp"
+					android:layout_marginStart="@dimen/dimen_8dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintBottom_toTopOf="@+id/shimmerCompanyName"
+					app:layout_constraintStart_toEndOf="@+id/shimmerImgCompanyLogo"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_chainStyle="packed"
+					app:layout_constraintWidth_percent="0.5" />
+
+				<View
+					android:id="@+id/shimmerCompanyName"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_14dp"
+					android:layout_marginTop="@dimen/dimen_6dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="@+id/shimmerCompanyNameLabel"
+					app:layout_constraintTop_toBottomOf="@+id/shimmerCompanyNameLabel"
+					app:layout_constraintWidth_percent="0.8" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+		<include layout="@layout/layout_separator" />
+
+		<View
+			android:layout_width="@dimen/dimen_150dp"
+			android:layout_height="@dimen/dimen_16dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="@dimen/dimen_208dp"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="@dimen/dimen_128dp"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<include
+			layout="@layout/layout_separator"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_8dp"
+			android:layout_marginTop="@dimen/dimen_16dp" />
+
+		<View
+			android:layout_width="@dimen/dimen_150dp"
+			android:layout_height="@dimen/dimen_16dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<include
+			layout="@layout/layout_separator"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_1dp"
+			android:layout_marginTop="@dimen/dimen_16dp" />
+
+		<View
+			android:layout_width="@dimen/dimen_150dp"
+			android:layout_height="@dimen/dimen_16dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<include
+			layout="@layout/layout_separator"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_1dp"
+			android:layout_marginTop="@dimen/dimen_16dp" />
+
+		<View
+			android:layout_width="@dimen/dimen_128dp"
+			android:layout_height="@dimen/dimen_16dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_12dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<include
+			layout="@layout/layout_separator"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_8dp"
+			android:layout_marginTop="@dimen/dimen_16dp" />
+
+		<View
+			android:layout_width="@dimen/dimen_128dp"
+			android:layout_height="@dimen/dimen_16dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			android:background="@drawable/bg_shimmer" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_12dp"
+			android:orientation="horizontal">
+
+			<View
+				android:layout_width="@dimen/dimen_100dp"
+				android:layout_height="@dimen/dimen_36dp"
+				android:layout_marginEnd="@dimen/dimen_4dp"
+				android:background="@drawable/bg_shimmer" />
+
+			<View
+				android:layout_width="@dimen/dimen_100dp"
+				android:layout_height="@dimen/dimen_36dp"
+				android:layout_marginStart="@dimen/dimen_4dp"
+				android:background="@drawable/bg_shimmer" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

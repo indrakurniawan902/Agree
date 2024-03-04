@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="@dimen/dimen_4dp"
+	app:cardCornerRadius="@dimen/dimen_4dp"
+	app:cardElevation="@dimen/dimen_0dp"
+	app:strokeColor="?attr/black_600"
+	app:strokeWidth="@dimen/dimen_1dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/dimen_12dp">
+
+		<TextView
+			android:id="@+id/tvSubVesselName"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/dimen_12dp"
+			android:textAppearance="?attr/bodySmallSemiBold"
+			android:textColor="?attr/black_font"
+			app:layout_constraintBottom_toBottomOf="@+id/cvStatus"
+			app:layout_constraintEnd_toStartOf="@+id/cvStatus"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@+id/cvStatus"
+			tools:text="Kandang Ayam 1 (50ha)" />
+
+		<com.google.android.material.card.MaterialCardView
+			android:id="@+id/cvStatus"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/dimen_26dp"
+			android:layout_marginEnd="@dimen/dimen_12dp"
+			app:cardCornerRadius="@dimen/dimen_45dp"
+			app:cardElevation="@dimen/dimen_0dp"
+			app:layout_constraintEnd_toStartOf="@id/ivNext"
+			app:layout_constraintTop_toTopOf="parent"
+			app:strokeColor="?attr/black_600"
+			app:strokeWidth="@dimen/dimen_1dp">
+
+			<TextView
+				android:id="@+id/tvStatus"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginHorizontal="@dimen/dimen_12dp"
+				android:layout_marginVertical="@dimen/dimen_4dp"
+				android:textAppearance="?attr/captionLargeSemiBold"
+				android:textColor="?attr/black_600"
+				tools:text="Tidak Aktif" />
+
+		</com.google.android.material.card.MaterialCardView>
+
+		<ImageView
+			android:id="@+id/ivNext"
+			android:layout_width="@dimen/dimen_24dp"
+			android:layout_height="@dimen/dimen_24dp"
+			android:contentDescription="@null"
+			android:src="@drawable/ic_chevron_right"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvLabelSubVesselId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:text="@string/label_sub_vessel_id"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/black_font"
+            app:layout_constraintEnd_toStartOf="@+id/tvLabelLocation"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvStatus" />
+
+        <TextView
+            android:id="@+id/tvLabelLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:text="@string/label_location"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/black_font"
+            app:layout_constraintEnd_toStartOf="@+id/tvLabelCommodities"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelSubVesselId"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelSubVesselId" />
+
+		<TextView
+			android:id="@+id/tvLabelCommodities"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_4dp"
+			android:layout_marginEnd="@dimen/dimen_12dp"
+			android:text="@string/label_commodities"
+			android:textAppearance="?attr/captionLargeRegular"
+			android:textColor="?attr/black_font"
+			app:layout_constraintEnd_toStartOf="@+id/ivNext"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/tvLabelLocation"
+			app:layout_constraintTop_toTopOf="@+id/tvLabelSubVesselId" />
+
+        <TextView
+            android:id="@+id/tvSubVesselId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/black_font"
+            app:layout_constraintEnd_toEndOf="@+id/tvLabelSubVesselId"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelSubVesselId"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelSubVesselId"
+            tools:text="KU777788888" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/black_font"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvLabelLocation"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelLocation"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelLocation"
+            tools:text="Sukabumi" />
+
+        <TextView
+            android:id="@+id/tvCommodities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/black_font"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvLabelCommodities"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelCommodities"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelCommodities"
+            tools:text="Ayam Petelur" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

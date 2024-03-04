@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "299723598009",
+    "project_id": "agree-ecosystem-staging",
+    "storage_bucket": "agree-ecosystem-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299723598009:android:d9312ebade5b9cebfd5368",
+        "android_client_info": {
+          "package_name": "com.agree.ecosystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299723598009-7qbiubi7r8d8b0rh3ef6k9mueo0ak6ke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP-j7x3SJYBd1JQOgiyPqfIgdadEsGLgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299723598009-7qbiubi7r8d8b0rh3ef6k9mueo0ak6ke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

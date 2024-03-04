@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/appBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<com.telkom.legion.component.toolbar.LgnToolbarWhite
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/label_agreepedia"
+			app:hideBackButton="false"
+			app:layout_constraintTop_toTopOf="parent" />
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nestedScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/appBar"
+		app:layout_constraintVertical_bias="1.0">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/textView14"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/dimen_16dp"
+				android:layout_marginTop="16dp"
+				android:text="@string/label_agreepedia_article"
+				android:textAppearance="?attr/bodySmallSemiBold"
+				android:textColor="?attr/black"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/textView13"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginEnd="16dp"
+				android:text="@string/label_agreepedia_article_description"
+				android:textAppearance="?attr/captionLargeRegular"
+				android:textColor="?attr/black_font"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+			<com.google.android.flexbox.FlexboxLayout
+				android:id="@+id/fbSearch"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:flexDirection="row_reverse"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+				<com.google.android.material.card.MaterialCardView
+					android:id="@+id/cvFilter"
+					android:layout_width="@dimen/dimen_124dp"
+					android:layout_height="@dimen/dimen_51dp"
+					android:layout_marginTop="23dp"
+					android:layout_marginEnd="@dimen/dimen_16dp"
+					app:cardCornerRadius="@dimen/dimen_6dp"
+					app:cardElevation="0dp"
+					app:strokeColor="?attr/black_600"
+					app:strokeWidth="@dimen/dimen_1dp">
+
+					<ImageView
+						android:id="@+id/ivFilter"
+						android:layout_width="@dimen/dimen_25dp"
+						android:layout_height="@dimen/dimen_25dp"
+						android:layout_gravity="center"
+						android:contentDescription="@null"
+						android:src="@drawable/ic_filter" />
+
+				</com.google.android.material.card.MaterialCardView>
+
+				<com.telkom.legion.component.textfield.LgnSingleField
+					android:id="@+id/etSearch"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="-10dp"
+					app:placeholderText="@string/placeholder_search_article"
+					app:startIconDrawable="@drawable/ic_search" />
+
+			</com.google.android.flexbox.FlexboxLayout>
+
+			<TextView
+				android:id="@+id/tvshowResult"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp"
+				android:layout_marginTop="8dp"
+				android:fontFamily="@font/nunitosans_regular"
+				android:text="@string/label_search_result_agreepedia"
+				android:textColor="?attr/black_font"
+				android:textSize="@dimen/dimen_12sp"
+				android:visibility="gone"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/fbSearch"
+				tools:visibility="visible" />
+
+			<TextView
+				android:id="@+id/tvResultKeyword"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="8dp"
+				android:layout_marginEnd="16dp"
+				android:fontFamily="@font/nunitosans_bold"
+				android:textSize="@dimen/dimen_12sp"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="@+id/tvshowResult"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toEndOf="@+id/tvshowResult"
+				app:layout_constraintTop_toTopOf="@+id/tvshowResult"
+				tools:text="@string/label_keyword"
+				tools:visibility="visible" />
+
+			<com.telkom.legion.component.chips.small.LgnPrimarySmallChipContainer
+				android:id="@+id/cgFilters"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:visibility="visible"
+				app:chipType="DEFAULT_TYPE"
+				app:closeIconVisible="true"
+				app:isSingleLine="true"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/tvshowResult"
+				tools:visibility="visible" />
+
+			<com.telkom.legion.component.viewstate.LgnViewState
+				android:id="@+id/msvArticles"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/cgFilters"
+				app:emptyView="@layout/layout_empty_list_agreepedia"
+				app:loadingView="@layout/layout_shimmer_agreepedia_articles"
+				app:viewState="content"
+				tools:viewState="content">
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rvArticles"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:overScrollMode="never"
+					app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+					tools:itemCount="5"
+					tools:listitem="@layout/item_agreepedia_article" />
+
+			</com.telkom.legion.component.viewstate.LgnViewState>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

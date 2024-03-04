@@ -1,0 +1,14 @@
+apply from: '../../ktlint.gradle'
+
+dependencies {
+    // Module Scope Dependencies
+}
+
+android {
+    namespace 'com.agree.ecosystem.core.analytics'
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+check.dependsOn ktlint

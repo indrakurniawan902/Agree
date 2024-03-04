@@ -1,0 +1,10 @@
+android {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+dependencies {
+    // Module Scope Dependencies
+    implementation project(":services:partnership")
+    implementation project(":services:utilities")
+}

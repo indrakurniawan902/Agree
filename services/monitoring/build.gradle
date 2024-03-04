@@ -1,0 +1,29 @@
+apply from: '../../ktlint.gradle'
+
+android {
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    // Module Scope Dependencies
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${libs.versions.desugar.get()}"
+    implementation libs.calendar.view
+    implementation project(':services:smartfarming')
+    implementation project(':services:utilities')
+
+    implementation libs.bundles.room
+    ksp(libs.room.compiler)
+
+    //Pluto Debugger
+    debugImplementation libs.bundles.pluto
+    releaseImplementation libs.bundles.pluto.noop
+}
+
+check.dependsOn ktlint

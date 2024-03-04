@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_settings_offline_monitoring"
+    app:startDestination="@id/settingsOfflineMonitoringFragment">
+    <fragment
+        android:id="@+id/settingsOfflineMonitoringFragment"
+        android:name="com.agree.ecosystem.monitoring.presentation.menu.settingsoffline.SettingsOfflineMonitoringFragment"
+        android:label="InsertAdditionalActivitySop"
+        tools:layout="@layout/fragment_settings_offline_monitoring" />
+</navigation>

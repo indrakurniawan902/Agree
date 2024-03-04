@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.telkom.legion.component.toolbar.LgnToolbarWhite
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/title_registration_status_details"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dimen_0dp"
+		app:layout_constraintBottom_toTopOf="@id/cvFooter"
+		app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:msv_loadingView="@layout/layout_shimmer_status_registration_details">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<com.telkom.legion.component.viewstate.LgnViewState
+				android:id="@+id/msvStatusRegistrationDetails"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				app:layout_constraintTop_toTopOf="parent"
+				app:loadingView="@layout/layout_shimmer_status_registration_details"
+				app:viewState="content">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@color/colorWhite">
+
+					<com.google.android.material.card.MaterialCardView
+						android:id="@+id/cvRegistrationStatusContainer"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						app:cardBackgroundColor="@color/colorWhite"
+						app:cardCornerRadius="0dp"
+						app:cardElevation="0dp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent">
+
+						<androidx.constraintlayout.widget.ConstraintLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginHorizontal="@dimen/dimen_16dp"
+							android:layout_marginVertical="@dimen/dimen_12dp">
+
+							<com.telkom.legion.component.image.LgnImageView
+								android:id="@+id/imgPartnerLogo"
+								android:layout_width="@dimen/dimen_48dp"
+								android:layout_height="@dimen/dimen_48dp"
+								android:radius="@dimen/dimen_8dp"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/tvPartnerName"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="@dimen/dimen_12dp"
+								android:textAppearance="?attr/bodySmallBold"
+								android:textColor="?attr/black_900"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/imgPartnerLogo"
+								app:layout_constraintTop_toTopOf="parent"
+								tools:text="PT. Lgneeculture" />
+
+							<TextView
+								android:id="@+id/tvRequestDate"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="@dimen/dimen_6dp"
+								android:textAppearance="?attr/captionSmallRegular"
+								android:textColor="?attr/black_font"
+								app:layout_constraintEnd_toEndOf="@+id/tvPartnerName"
+								app:layout_constraintStart_toStartOf="@+id/tvPartnerName"
+								app:layout_constraintTop_toBottomOf="@id/tvPartnerName"
+								tools:text="Diajukan 10 Januari 2022" />
+
+							<com.google.android.material.card.MaterialCardView
+								android:id="@+id/cvRegistrationStatus"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="@dimen/dimen_6dp"
+								app:cardBackgroundColor="?attr/black_100"
+								app:cardCornerRadius="@dimen/dimen_45dp"
+								app:cardElevation="0dp"
+								app:layout_constraintStart_toStartOf="@+id/tvPartnerName"
+								app:layout_constraintTop_toBottomOf="@id/tvRequestDate">
+
+								<TextView
+									android:id="@+id/tvRegistrationStatus"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_marginHorizontal="@dimen/dimen_12dp"
+									android:layout_marginVertical="@dimen/dimen_6dp"
+									android:textAppearance="?attr/captionSmallRegular"
+									android:textColor="?attr/black_700"
+									tools:text="Sedang Diajukan" />
+
+							</com.google.android.material.card.MaterialCardView>
+
+						</androidx.constraintlayout.widget.ConstraintLayout>
+
+					</com.google.android.material.card.MaterialCardView>
+
+					<com.telkom.legion.component.dividers.LgnDivider
+						android:id="@+id/viewDivider2"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						app:layout_constraintTop_toBottomOf="@id/cvRegistrationStatusContainer" />
+
+					<TextView
+						android:id="@+id/tvRegistrationInfoLabel"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="@dimen/dimen_16dp"
+						android:layout_marginTop="@dimen/dimen_16dp"
+						android:text="@string/label_registration_info"
+						android:textAppearance="?attr/bodySmallSemiBold"
+						android:textColor="?attr/black"
+						app:layout_constraintEnd_toEndOf="@+id/cvRegistrationStatusContainer"
+						app:layout_constraintStart_toStartOf="@+id/cvRegistrationStatusContainer"
+						app:layout_constraintTop_toBottomOf="@id/viewDivider2" />
+
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/rvSectors"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/dimen_8dp"
+						android:background="?attr/black_25"
+						android:overScrollMode="never"
+						android:paddingHorizontal="@dimen/dimen_16dp"
+						android:paddingVertical="@dimen/dimen_4dp"
+						app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+						app:layout_constraintTop_toBottomOf="@+id/tvRegistrationInfoLabel"
+						tools:itemCount="2"
+						tools:listitem="@layout/item_selected_sectors" />
+
+					<TextView
+						android:id="@+id/tvFarmAreaLabel"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/dimen_8dp"
+						android:text="@string/label_farm_area"
+						android:textAppearance="?attr/bodySmallSemiBold"
+						android:textColor="?attr/black"
+						app:layout_constraintEnd_toEndOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintHorizontal_chainStyle="packed"
+						app:layout_constraintStart_toStartOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintTop_toBottomOf="@+id/rvSectors" />
+
+					<TextView
+						android:id="@+id/tvFarmArea"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/dimen_4dp"
+						android:textAppearance="?attr/bodySmallRegular"
+						android:textColor="?attr/black_font"
+						app:layout_constraintEnd_toEndOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintHorizontal_chainStyle="packed"
+						app:layout_constraintStart_toStartOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintTop_toBottomOf="@+id/tvFarmAreaLabel"
+						tools:text="0.4 ha" />
+
+					<TextView
+						android:id="@+id/tvFarmAddressLabel"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/dimen_8dp"
+						android:text="@string/label_area_address"
+						android:textAppearance="?attr/bodySmallSemiBold"
+						android:textColor="?attr/black"
+						app:layout_constraintEnd_toEndOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintHorizontal_chainStyle="packed"
+						app:layout_constraintStart_toStartOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintTop_toBottomOf="@+id/tvFarmArea" />
+
+					<TextView
+						android:id="@+id/tvAreaAddress"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/dimen_4dp"
+						android:textAppearance="?attr/bodySmallRegular"
+						android:textColor="?attr/black_font"
+						app:layout_constraintEnd_toEndOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintHorizontal_chainStyle="packed"
+						app:layout_constraintStart_toStartOf="@+id/tvRegistrationInfoLabel"
+						app:layout_constraintTop_toBottomOf="@+id/tvFarmAddressLabel"
+						tools:text="Jl. Terusan Suryani No. 34, Desa Awilegar, Kecamatan Pamengpeuk, Kab. Garut, Jawa Barat" />
+
+					<com.telkom.legion.component.dividers.LgnDivider
+						android:id="@+id/viewDivider3"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/dimen_8dp"
+						app:layout_constraintTop_toBottomOf="@id/tvAreaAddress" />
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+			</com.telkom.legion.component.viewstate.LgnViewState>
+
+			<com.telkom.legion.component.viewstate.LgnViewState
+				android:id="@+id/msvTracking"
+				android:layout_width="@dimen/dimen_0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/dimen_16dp"
+				android:layout_marginTop="@dimen/dimen_8dp"
+				app:layout_constraintEnd_toEndOf="@+id/msvStatusRegistrationDetails"
+				app:layout_constraintStart_toStartOf="@+id/msvStatusRegistrationDetails"
+				app:layout_constraintTop_toBottomOf="@id/msvStatusRegistrationDetails"
+				app:loadingView="@layout/layout_shimmer_registration_tracking"
+				app:viewState="content">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:id="@+id/tvRegistrationStatusLabel"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/label_registration_status"
+						android:textAppearance="?attr/bodySmallBold"
+						android:textColor="?attr/black"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/rvStatusTracking"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_marginTop="@dimen/dimen_16dp"
+						android:overScrollMode="never"
+						app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintEnd_toEndOf="@+id/tvRegistrationStatusLabel"
+						app:layout_constraintStart_toStartOf="@+id/tvRegistrationStatusLabel"
+						app:layout_constraintTop_toBottomOf="@+id/tvRegistrationStatusLabel"
+						tools:itemCount="5"
+						tools:listitem="@layout/item_registration_status_details" />
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+			</com.telkom.legion.component.viewstate.LgnViewState>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+	<com.google.android.material.card.MaterialCardView
+		android:id="@+id/cvFooter"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:cardBackgroundColor="?attr/white"
+		app:cardElevation="@dimen/dimen_20dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:visibility="visible">
+
+		<com.telkom.legion.component.button.outline.LgnErrorOutlineFitButton
+			android:id="@+id/btnCancelSubmission"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginVertical="@dimen/dimen_24dp"
+			android:text="@string/action_cancel_proposal" />
+
+	</com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

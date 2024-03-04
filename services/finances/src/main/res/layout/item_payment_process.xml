@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.telkom.legion.component.radio.LgnPrimaryRadioButton
+        android:id="@+id/lgnPrimaryRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/captionLargeBold"
+        android:textColor="?attr/colorPrimary500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Pengajuan" />
+
+    <View
+        android:id="@+id/viewVerticalLine"
+        android:layout_width="@dimen/dimen_2dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:background="?attr/black_400"
+        app:layout_constraintStart_toStartOf="@+id/lgnPrimaryRadioButton"
+        app:layout_constraintTop_toBottomOf="@+id/lgnPrimaryRadioButton" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:textAppearance="?attr/captionLargeSemiBold"
+        android:textColor="?attr/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewVerticalLine"
+        app:layout_constraintTop_toBottomOf="@+id/lgnPrimaryRadioButton"
+        tools:text="Menunggu Review" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:textAppearance="?attr/captionLargeRegular"
+        android:textColor="?attr/colorTertiary_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewVerticalLine"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:text="Proses permodalan selesai, silakan melakukan pencairan dana." />
+
+
+    <TextView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:textAppearance="?attr/captionSmallRegular"
+        android:textColor="?attr/colorTertiary_400"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewVerticalLine"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        tools:text="10 Jan 2023" />
+</androidx.constraintlayout.widget.ConstraintLayout>

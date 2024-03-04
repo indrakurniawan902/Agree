@@ -1,0 +1,16 @@
+stages:
+  - linter-formatting
+  - linter-test
+  - deploy
+
+linter-test:       # This job runs in the build stage, which runs first.
+  stage: linter-test
+  dependencies:
+    - linter-formatting
+  script:
+    - ./gradlew ktlint -Pnexus_username=${nexus_username} -Pnexus_password=${nexus_password} -Plegion_username=${legion_username} -Plegion_password=${legion_password}
+
+linter-formatting:
+  stage: linter-formatting
+  script:
+    - ./gradlew ktlintFormat -Pnexus_username=${nexus_username} -Pnexus_password=${nexus_password} -Plegion_username=${legion_username} -Plegion_password=${legion_password}

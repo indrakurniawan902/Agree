@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Logo Section  -->
+    <color name="logo_primary">#053142</color>
+    <color name="logo_accent">#399F64</color>
+    <!--  End Logo Section  -->
+
+    <!-- Modal Color -->
+    <color name="grey_title">#757575</color>
+
+    <color name="primary_25">#f9fbf9</color>
+    <color name="primary_50">#f2f8f3</color>
+    <color name="primary_100">#e6f1e8</color>
+    <color name="primary_200">#cae2cf</color>
+    <color name="primary_300">#aad2b2</color>
+    <color name="primary_400">#82c190</color>
+    <color name="primary_500">#47af64</color>
+    <color name="primary_600">#3f9c59</color>
+    <color name="primary_700">#36874d</color>
+    <color name="primary_800">#2c6e3f</color>
+    <color name="primary_900">#1f4e2c</color>
+    <color name="secondary_25">#f1f2f2</color>
+    <color name="secondary_50">#dbdede</color>
+    <color name="secondary_100">#a6b3b7</color>
+    <color name="secondary_200">#8da0a8</color>
+    <color name="secondary_300">#607b86</color>
+    <color name="secondary_400">#345664</color>
+    <color name="secondary_500">#073142</color>
+    <color name="secondary_600">#062b3b</color>
+    <color name="secondary_700">#052533</color>
+    <color name="secondary_800">#041e29</color>
+    <color name="secondary_900">#03151d</color>
+    <color name="tertiary_25">#f9f9f9</color>
+    <color name="tertiary_50">#f3f3f3</color>
+    <color name="tertiary_100">#e8e8e8</color>
+    <color name="tertiary_200">#cecece</color>
+    <color name="tertiary_300">#b1b1b1</color>
+    <color name="tertiary_400">#8f8f8f</color>
+    <color name="tertiary_500">#616161</color>
+    <color name="tertiary_600">#565656</color>
+    <color name="tertiary_700">#4b4b4b</color>
+    <color name="tertiary_800">#3d3d3d</color>
+    <color name="tertiary_900">#2b2b2b</color>
+    <color name="error_25">#fef9f8</color>
+    <color name="error_50">#fdf2f2</color>
+    <color name="error_100">#fce6e5</color>
+    <color name="error_200">#f9cac8</color>
+    <color name="error_300">#f6a9a7</color>
+    <color name="error_400">#f3817c</color>
+    <color name="error_500">#f04438</color>
+    <color name="error_600">#d63c32</color>
+    <color name="error_700">#b9342b</color>
+    <color name="error_800">#972b23</color>
+    <color name="error_900">#6b1e19</color>
+    <color name="warning_25">#fefaf8</color>
+    <color name="warning_50">#fef6f1</color>
+    <color name="warning_100">#fdece4</color>
+    <color name="warning_200">#fbd9c5</color>
+    <color name="warning_300">#fac4a1</color>
+    <color name="warning_400">#f8ac72</color>
+    <color name="warning_500">#f79009</color>
+    <color name="warning_600">#dc8008</color>
+    <color name="warning_700">#bf6f06</color>
+    <color name="warning_800">#9c5b05</color>
+    <color name="warning_900">#6e4004</color>
+    <color name="success_25">#f6fef9</color>
+    <color name="success_50">#ecfdf3</color>
+    <color name="success_100">#d1fadf</color>
+    <color name="success_200">#a6f4c5</color>
+    <color name="success_300">#6ce9a6</color>
+    <color name="success_400">#32d583</color>
+    <color name="success_500">#12b76a</color>
+    <color name="success_600">#039855</color>
+    <color name="success_700">#027a48</color>
+    <color name="success_800">#05603a</color>
+    <color name="success_900">#054f31</color>
+    <color name="information_25">#f5fbff</color>
+    <color name="information_50">#f0f9ff</color>
+    <color name="information_100">#e0f2fe</color>
+    <color name="information_200">#b9e6fe</color>
+    <color name="information_300">#7cd4fd</color>
+    <color name="information_400">#36bffa</color>
+    <color name="information_500">#0ba5ec</color>
+    <color name="information_600">#0086c9</color>
+    <color name="information_700">#026aa2</color>
+    <color name="information_800">#065986</color>
+    <color name="information_900">#0b4a6f</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#212121</color>
+
+    <!--  AGL Section  -->
+    <color name="agl_pressed">#A6690D</color>
+    <color name="agl_hover">#D38107</color>
+    <color name="agl_normal">#FF9900</color>
+    <color name="agl_40">#FEAC32</color>
+    <color name="agl_30">#FDC064</color>
+    <color name="agl_20">#FCD396</color>
+    <color name="agl_10">#FBE7C8</color>
+    <!--  End AGL Section  -->
+
+    <!--  Light Blue (Fisheries Primary) Section  -->
+    <color name="aqf_pressed">#226A8F</color>
+    <color name="aqf_hover">#2283B3</color>
+    <color name="aqf_normal">#229BD8</color>
+    <color name="aqf_40">#4DAEDF</color>
+    <color name="aqf_30">#78C1E6</color>
+    <color name="aqf_20">#A4D4EC</color>
+    <color name="aqf_10">#CFE7F3</color>
+    <!--  End Light Blue Section  -->
+
+    <!--  Dark Blue (Fisheries Secondary) Section  -->
+    <color name="fisheries_pressed">#112B35</color>
+    <color name="fisheries_hover">#0C2E3B</color>
+    <color name="fisheries_normal">#073142</color>
+    <color name="fisheries_40">#385967</color>
+    <color name="fisheries_30">#68818C</color>
+    <color name="fisheries_20">#99AAB0</color>
+    <color name="fisheries_10">#C9D2D5</color>
+    <!--  End Dark Blue Section  -->
+
+    <!--  Poultry Section  -->
+    <color name="poultry_70">#A56A25</color>
+    <color name="poultry_60">#D18226</color>
+    <color name="poultry_50">#FD9A27</color>
+    <color name="poultry_40">#FCAD51</color>
+    <color name="poultry_30">#FCC07B</color>
+    <color name="poultry_20">#FBD4A6</color>
+    <color name="poultry_10">#FBE7D0</color>
+    <!--  End Poultry Section  -->
+
+    <!--  Ruminansia Section  -->
+    <color name="ruminansia_70">#A07926</color>
+    <color name="ruminansia_60">#CB9728</color>
+    <color name="ruminansia_50">#F5B42A</color>
+    <color name="ruminansia_40">#F6C254</color>
+    <color name="ruminansia_30">#F7D07D</color>
+    <color name="ruminansia_20">#F8DEA7</color>
+    <color name="ruminansia_10">#F9ECD0</color>
+    <!--  End Ruminansia Section  -->
+
+    <color name="custom_info_500">#276EF1</color>
+    <color name="custom_info_700">#185BD7</color>
+</resources>

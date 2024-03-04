@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.telkom.legion.component.toolbar.LgnToolbarWhite
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_detail_sub_area"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/view"
+            layout="@layout/layout_separator"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTitleSubVessel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <TextView
+                android:id="@+id/tvSubVesselName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:textAppearance="?attr/bodySmallSemiBold"
+                android:textColor="?attr/black_100"
+                app:layout_constraintBottom_toBottomOf="@+id/cvStatus"
+                app:layout_constraintEnd_toStartOf="@+id/cvStatus"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cvStatus"
+                tools:text="Kandang Ayam 1 (50ha)" />
+
+            <TextView
+                android:id="@+id/tvLabelSubVesselId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginEnd="@dimen/dimen_4dp"
+                android:text="@string/label_sub_vessel_id"
+                android:textAppearance="?attr/captionLargeRegular"
+                android:textColor="?attr/black_font"
+                app:layout_constraintEnd_toStartOf="@+id/tvLabelLocation"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvStatus" />
+
+            <TextView
+                android:id="@+id/tvLabelLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_4dp"
+                android:text="@string/label_location"
+                android:textAppearance="?attr/captionLargeRegular"
+                android:textColor="?attr/black_font"
+                app:layout_constraintEnd_toStartOf="@+id/tvLabelCommodities"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvLabelSubVesselId"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelSubVesselId" />
+
+            <TextView
+                android:id="@+id/tvLabelCommodities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                android:text="@string/label_commodities"
+                android:textAppearance="?attr/captionLargeRegular"
+                android:textColor="?attr/black_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvLabelLocation"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelSubVesselId" />
+
+            <TextView
+                android:id="@+id/tvSubVesselId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginEnd="@dimen/dimen_4dp"
+                android:textAppearance="?attr/captionLargeSemiBold"
+                android:textColor="?attr/black_100"
+                app:layout_constraintEnd_toEndOf="@+id/tvLabelSubVesselId"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelSubVesselId"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelSubVesselId"
+                tools:text="KU777788888" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textAppearance="?attr/captionLargeSemiBold"
+                android:textColor="?attr/black_100"
+                app:layout_constraintEnd_toEndOf="@+id/tvLabelLocation"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelLocation"
+                tools:text="Sukabumi" />
+
+            <TextView
+                android:id="@+id/tvCommodities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textAppearance="?attr/captionLargeSemiBold"
+                android:textColor="?attr/black_100"
+                app:layout_constraintEnd_toEndOf="@+id/tvLabelCommodities"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelCommodities"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelCommodities"
+                tools:text="Ayam Petelur" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_26dp"
+                app:cardCornerRadius="@dimen/dimen_45dp"
+                app:cardElevation="@dimen/dimen_0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="?attr/black_600"
+                app:strokeWidth="@dimen/dimen_1dp">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/dimen_12dp"
+                    android:layout_marginVertical="@dimen/dimen_4dp"
+                    android:textAppearance="?attr/captionLargeSemiBold"
+                    android:textColor="?attr/black_600"
+                    tools:text="Tidak Aktif" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/view2"
+            layout="@layout/layout_separator"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clTitleSubVessel" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCultivationCycle"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+            <TextView
+                android:id="@+id/tvCultivationCycle"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_cultivation_cycle"
+                android:textAppearance="?attr/bodySmallSemiBold"
+                android:textColor="?attr/black_100"
+                app:layout_constraintBottom_toBottomOf="@id/ibShow"
+                app:layout_constraintEnd_toStartOf="@id/ibShow"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ibShow" />
+
+            <ImageButton
+                android:id="@+id/ibShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_chevron_down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?black_800"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.telkom.legion.component.accordion.LgnExpandableView
+            android:id="@+id/expCommodity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/clCultivationCycle"
+            app:msv_loadingView="@layout/layout_shimmer_detail_subvessel"
+            app:msv_viewState="content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCultivationDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/llCultivationCycle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_12dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_12dp"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:id="@+id/llCultivationDate"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelCultivationDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_cultivation_date"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvCultivationDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="Belum terdata" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewVerticalLine"
+                        android:layout_width="@dimen/dimen_2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimen_8dp"
+                        android:background="?attr/black_300"
+                        android:minHeight="@dimen/dimen_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llLivestockAge"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_21dp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelLivestockAges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_livestock_age"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvLivestockAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="0 Hari" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewVerticalLine2"
+                        android:layout_width="@dimen/dimen_2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimen_8dp"
+                        android:background="?attr/black_300"
+                        android:minHeight="@dimen/dimen_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llCycleTo"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_21dp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelCycleTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_cycle_to"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvCycleTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewHorizontalLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/black_300"
+                    android:minHeight="@dimen/dimen_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llCultivationCycle1"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:id="@+id/llCultivationCycle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewHorizontalLine1"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:id="@+id/llVarietas"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelVarietas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_strain"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvVarietas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="Belum terdata" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewVerticalLine3"
+                        android:layout_width="@dimen/dimen_2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimen_8dp"
+                        android:background="?attr/black_300"
+                        android:minHeight="@dimen/dimen_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llTotalLivestock"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_21dp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelTotalLivestock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_total_livestock"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvTotalLivestock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="0 Ekor" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewVerticalLine4"
+                        android:layout_width="@dimen/dimen_2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimen_8dp"
+                        android:background="?attr/black_300"
+                        android:minHeight="@dimen/dimen_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llLeftoverFeed"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_21dp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelLeftoverFeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_leftover_feed"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvLeftoverFeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="0 Ton" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewHorizontalLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/black_300"
+                    android:minHeight="@dimen/dimen_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llCultivationCycle2"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:id="@+id/llCultivationCycle3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewHorizontalLine2"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:id="@+id/llTarget"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_target_ton"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="1000 Ton" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewVerticalLine5"
+                        android:layout_width="@dimen/dimen_2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimen_8dp"
+                        android:background="?attr/black_300"
+                        android:minHeight="@dimen/dimen_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llProduction"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_21dp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelProduction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_production_ton"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvProduction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="1 Ton" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewVerticalLine6"
+                        android:layout_width="@dimen/dimen_2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dimen_8dp"
+                        android:background="?attr/black_300"
+                        android:minHeight="@dimen/dimen_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llRealization"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_21dp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvLabelRealization"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_realization_ton"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            android:textColor="?attr/black_font" />
+
+                        <TextView
+                            android:id="@+id/tvRealization"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:textAppearance="?attr/captionLargeBold"
+                            android:textColor="?attr/black_font"
+                            tools:text="0 Ton" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.telkom.legion.component.accordion.LgnExpandableView>
+
+
+
+
+        <include
+            android:id="@+id/view6"
+            layout="@layout/layout_separator"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expCommodity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

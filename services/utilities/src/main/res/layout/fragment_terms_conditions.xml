@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/appBarLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<com.telkom.legion.component.toolbar.LgnToolbarWhite
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/title_terms_and_conditions"
+			app:hideBackButton="false"
+			app:layout_constraintTop_toTopOf="parent" />
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<com.telkom.legion.component.viewstate.LgnViewState
+		android:id="@+id/msvTermsConditions"
+		android:layout_width="@dimen/dimen_0dp"
+		android:layout_height="@dimen/dimen_0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+		app:loadingView="@layout/layout_shimmer_app_info"
+		app:viewState="content">
+
+		<WebView
+			android:id="@+id/wvTermsConditions"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+
+	</com.telkom.legion.component.viewstate.LgnViewState>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

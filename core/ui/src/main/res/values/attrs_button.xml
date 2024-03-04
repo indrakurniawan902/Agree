@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LgnWhiteOutlineSlimButton" parent="LgnButton">
+        <attr name="android:text" />
+        <attr name="android:enabled" />
+        <attr name="isLoading" />
+        <attr name="textSize" />
+        <attr name="endIconDrawable" />
+        <attr name="startIconDrawable" />
+        <attr name="colorSet" />
+    </declare-styleable>
+    <declare-styleable name="LgnWhiteOutlineSmallButton" parent="LgnButton">
+        <attr name="android:text" />
+        <attr name="android:enabled" />
+        <attr name="isLoading" />
+        <attr name="textSize" />
+        <attr name="endIconDrawable" />
+        <attr name="startIconDrawable" />
+        <attr name="colorSet" />
+    </declare-styleable>
+</resources>

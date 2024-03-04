@@ -1,0 +1,114 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen_16dp"
+    android:layout_marginBottom="@dimen/dimen_8dp"
+    android:elevation="@dimen/dimen_0dp"
+    app:cardCornerRadius="@dimen/dimen_4dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvLineSpace"
+    app:strokeColor="@color/black_300"
+    app:strokeWidth="@dimen/dimen_1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="?attr/spacing3"
+        android:paddingVertical="?attr/spacing2">
+
+        <TextView
+            android:id="@+id/tvPhaseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/info_hover"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView2"
+            app:layout_constraintEnd_toStartOf="@+id/materialCardView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView2"
+            tools:text="@string/sample_activity_name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            app:cardCornerRadius="@dimen/dimen_50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/agl_normal"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:paddingVertical="@dimen/dimen_5dp"
+                android:text="@string/label_additional_activity"
+                android:textAppearance="?attr/captionSmallSemiBold"
+                android:textColor="@color/agl_normal" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvActivityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+            app:layout_goneMarginTop="?attr/spacing2"
+            tools:text="@string/sample_detail_activity_name" />
+
+        <ImageView
+            android:id="@+id/imgInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/spacing1"
+            android:src="@drawable/ic_info_field"
+            app:layout_constraintStart_toEndOf="@id/tvActivityName"
+            app:layout_constraintTop_toTopOf="@id/tvActivityName"
+            app:layout_constraintBottom_toBottomOf="@id/tvActivityName"/>
+
+        <ImageView
+            android:id="@+id/imgLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="?attr/spacing2"
+            android:layout_marginEnd="?attr/spacing2"
+            android:background="@color/black_300"
+            app:layout_constraintEnd_toStartOf="@id/imgChevronActivity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityName" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/spacing2"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/black_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imgLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLine"
+            tools:text="@string/sample_description_detail_activity" />
+
+        <ImageView
+            android:id="@+id/imgChevronActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="?attr/spacing1"
+            android:src="@drawable/ic_chevron_right_black_font"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

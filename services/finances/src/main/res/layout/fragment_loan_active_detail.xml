@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.menu.finance.loanactive.detail.LoanActiveDetailFragment">
+
+    <com.telkom.legion.component.toolbar.LgnToolbarWhite
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:text="@string/label_title_loan"
+        app:contentInsetEnd="@dimen/dimen_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.telkom.legion.component.image.LgnImageView
+                    android:id="@+id/ivCultivatorPhoto"
+                    android:layout_width="@dimen/dimen_60dp"
+                    android:layout_height="@dimen/dimen_60dp"
+                    android:radius="@dimen/dimen_8dp"
+                    app:cache="AUTOMATIC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tvLabelName"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/label_name"
+                    android:textAppearance="?attr/captionSmallSemiBold"
+                    android:textColor="@color/tertiary_400"
+                    app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvValueName"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:ellipsize="end"
+                    android:textAppearance="?attr/captionLargeRegular"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelName"
+                    tools:text="@string/label_name" />
+
+                <TextView
+                    android:id="@+id/tvLabelNoHp"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/label_nik"
+                    android:textAppearance="?attr/captionSmallSemiBold"
+                    android:textColor="@color/tertiary_400"
+                    app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/tvValueName" />
+
+                <TextView
+                    android:id="@+id/tvValueNoHp"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:ellipsize="end"
+                    android:textAppearance="?attr/captionLargeRegular"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelNoHp"
+                    tools:text="0895613383420" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerDataFinance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:background="?attr/colorTertiary_25"
+                android:paddingVertical="@dimen/dimen_12dp"
+                app:layout_constraintTop_toBottomOf="@+id/containerProfile">
+
+                <com.agree.ecosystem.finances.utils.CustomInfoProfileCultivatorFinance
+                    android:id="@+id/ci1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.agree.ecosystem.finances.utils.CustomInfoProfileCultivatorFinance
+                    android:id="@+id/ci2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ci1" />
+
+                <com.agree.ecosystem.finances.utils.CustomInfoProfileCultivatorFinance
+                    android:id="@+id/ci3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ci2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mvDisbursementCapital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                app:cardCornerRadius="@dimen/dimen_6dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/containerDataFinance"
+                app:strokeColor="?attr/colorPrimary_pressed"
+                app:strokeWidth="@dimen/dimen_1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginVertical="@dimen/dimen_8dp">
+
+                    <TextView
+                        android:id="@+id/tvMemberList"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/label_apply_for_disbursement_of_capital"
+                        android:textAppearance="?attr/bodySmallSemiBold"
+                        android:textColor="?attr/black"
+                        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDescMemberList"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        android:drawablePadding="@dimen/dimen_4dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/label_liquid_capital_faster"
+                        android:textAppearance="?attr/captionLargeRegular"
+                        android:textColor="@color/black_font"
+                        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                        app:layout_constraintStart_toStartOf="@+id/tvMemberList"
+                        app:layout_constraintTop_toBottomOf="@id/tvMemberList" />
+
+                    <ImageButton
+                        android:id="@+id/btnNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_chevron_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="?black_800" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mvDisbursementCapital">
+
+                <TextView
+                    android:id="@+id/tvListTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_loan_process"
+                    android:textAppearance="?attr/bodySmallSemiBold"
+                    android:textColor="?attr/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvListTitle"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_payment_process" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

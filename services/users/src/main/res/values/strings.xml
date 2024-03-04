@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_profile">Detail Profil</string>
+    <string name="title_update_profile">Ubah Profil</string>
+    <string name="label_job">Pekerjaan</string>
+    <string name="label_gender">Jenis Kelamin</string>
+    <string name="label_phone_number">No. Handphone</string>
+    <string name="label_email">Email</string>
+    <string name="label_address">Alamat Lengkap</string>
+    <string name="title_edit_profile">Ubah Profil</string>
+    <string name="label_fullname">Nama Lengkap</string>
+    <string name="label_fullname_placeholder">Masukkan nama lengkap Anda</string>
+    <string name="label_male">Laki-Laki</string>
+    <string name="label_female">Perempuan</string>
+    <string name="placeholder_full_name">Masukkan Nama Lengkap anda</string>
+    <string name="placeholder_phone_number">Masukkan No. Handphone anda</string>
+    <string name="placeholder_email">Masukkan Email anda</string>
+    <string name="placeholder_nik">Masukkan NIK anda</string>
+    <string name="placeholder_address">Masukkan Alamat Lengkap anda</string>
+    <string name="placeholder_job">Masukkan Pekerjaan Anda</string>
+    <string name="label_phonenumber">No Handphone</string>
+    <string name="action_save_changes">Simpan Perubahan</string>
+    <string name="label_update_profile_dialog">Yakin ingin menyimpan perubahan data profil kamu?</string>
+    <string name="action_yes">Ya</string>
+    <string name="action_cancel">Batal</string>
+    <string name="error_empty_field">%s tidak boleh kosong!</string>
+    <string name="error_rule_fullname">Nama lengkap tidak boleh terdapat angka</string>
+    <string name="error_rule_job">Pekerjaan tidak boleh terdapat angka</string>
+    <string name="error_rule_email">Format email salah</string>
+    <string name="error_rule_phone">No. Handphone harus terdiri dari 10–14 digit angka, diawali dengan 08 atau 628</string>
+    <string name="error_phone_already_registered">No.Handphone sudah terdaftar</string>
+    <string name="error_email_already_register">Email sudah terdaftar</string>
+    <string name="error_gender_empty">Jenis Kelamin tidak boleh kosong.</string>
+    <string name="label_update_profile_success">Berhasil merubah data</string>
+</resources>

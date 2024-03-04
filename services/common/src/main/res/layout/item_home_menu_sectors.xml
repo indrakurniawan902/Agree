@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen_70dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dimen_5dp"
+    android:layout_marginEnd="@dimen/dimen_8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="UseCompoundDrawables">
+
+    <com.telkom.legion.component.image.LgnImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:src="@drawable/ic_horticulture"
+        android:layout_gravity="center"
+        app:cache="AUTOMATIC"
+        android:radius="@dimen/dimen_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/label_sub_sector" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/foo"
+        android:textAppearance="?attr/captionLargeRegular"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+</LinearLayout>

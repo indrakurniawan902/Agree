@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_agreepedia"
+    app:startDestination="@id/agreepediaFragment">
+    <fragment
+        android:id="@+id/agreepediaFragment"
+        android:name="com.agree.ecosystem.agreepedia.presentation.menu.home.AgreepediaFragment"
+        android:label="AgreepediaFragment"
+        tools:layout="@layout/fragment_agreepedia">
+        <action
+            android:id="@+id/action_agreepediaFragment_to_agreepediaDetailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.agree.ecosystem.agreepedia.presentation.menu.detail.DetailFragment"
+        android:label="AgreepediaDetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="agreepedia"
+            app:argType="com.agree.ecosystem.agreepedia.domain.model.article.Article"
+            app:nullable="true" />
+        <argument
+            android:name="oId"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_agreepediaDetailFragment_self"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+</navigation>

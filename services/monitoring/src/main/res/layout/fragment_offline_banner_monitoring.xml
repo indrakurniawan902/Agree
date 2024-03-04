@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.telkom.legion.component.accordion.LgnExpandableView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:isExpanded="true"
+    tools:context=".presentation.banner.offline.OfflineBannerFragment"
+    tools:isExpanded="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/customInfo500"
+        android:padding="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.agree.ui.widget.button.outline.LgnWhiteOutlineSmallButton
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/ic_settings" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:text="@string/label_title_offline_banner_monitoring_not_connected"
+            android:textAppearance="?attr/bodySmallBold"
+            android:textColor="?attr/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSettings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:text="@string/label_desc_offline_banner_monitoring_empty"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSettings"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <com.agree.ui.widget.button.outline.LgnWhiteOutlineSlimButton
+            android:id="@+id/btnUpload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:text="@string/label_upload_your_draft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSettings"
+            app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.telkom.legion.component.accordion.LgnExpandableView>

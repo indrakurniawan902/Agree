@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_status_register"
+    app:startDestination="@id/statusRegistrationFragment2">
+
+
+    <fragment
+        android:id="@+id/statusRegistrationFragment2"
+        android:name="com.agree.ecosystem.partnership.presentation.menu.statusregistration.StatusRegistrationFragment"
+        android:label="StatusRegistrationFragment"
+        tools:layout="@layout/fragment_status_registration"/>
+</navigation>

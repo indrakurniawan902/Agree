@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.menu.finance.cultivator.CultivatorFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mvMemberList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        app:cardCornerRadius="@dimen/dimen_6dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="?attr/black_300"
+        app:strokeWidth="@dimen/dimen_1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp">
+
+            <com.telkom.legion.component.image.LgnImageView
+                android:id="@+id/ivMemberList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:radius="@dimen/dimen_8dp"
+                android:src="@drawable/ic_file_text"
+                app:cache="AUTOMATIC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMemberList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/label_list_cultivator"
+                android:textAppearance="?attr/bodySmallSemiBold"
+                android:textColor="?attr/black_font"
+                app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                app:layout_constraintStart_toEndOf="@+id/ivMemberList"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDescMemberList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:drawablePadding="@dimen/dimen_4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/label_desc_list_cultivator"
+                android:textAppearance="?attr/captionLargeRegular"
+                android:textColor="@color/tertiary_500"
+                app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                app:layout_constraintStart_toStartOf="@+id/tvMemberList"
+                app:layout_constraintTop_toBottomOf="@id/tvMemberList" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_chevron_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?black_800" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/dimen_6dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mvMemberList"
+        app:strokeColor="?attr/black_300"
+        app:strokeWidth="@dimen/dimen_1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp">
+
+            <com.telkom.legion.component.image.LgnImageView
+                android:id="@+id/ivCollateralLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:radius="@dimen/dimen_8dp"
+                android:src="@drawable/ic_shield"
+                app:cache="AUTOMATIC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCollateralTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/label_collateral"
+                android:textAppearance="?attr/bodySmallSemiBold"
+                android:textColor="?attr/black_font"
+                app:layout_constraintEnd_toStartOf="@+id/btnNextCollateral"
+                app:layout_constraintStart_toEndOf="@+id/ivCollateralLogo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSectorCompanyPartner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:drawablePadding="@dimen/dimen_4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/label_desc_collateral"
+                android:textAppearance="?attr/captionLargeRegular"
+                android:textColor="@color/tertiary_500"
+                app:layout_constraintEnd_toStartOf="@+id/btnNextCollateral"
+                app:layout_constraintStart_toStartOf="@+id/tvCollateralTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvCollateralTitle" />
+
+            <ImageButton
+                android:id="@+id/btnNextCollateral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_chevron_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?black_800" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

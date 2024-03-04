@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.telkom.legion.component.toolbar.LgnToolbarWhite
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_edit_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/cvSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.telkom.legion.component.viewstate.LgnViewState
+            android:id="@+id/msvUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:loadingView="@layout/layout_shimmer_update_profile"
+            app:viewState="content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/dimen_16dp">
+
+                <com.agree.ui.widget.photofield.PhotoFieldView
+                    android:id="@+id/pfProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp" />
+
+                <com.telkom.legion.component.textfield.LgnSingleField
+                    android:id="@+id/etFullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_fullname"
+                    app:isRequired="true"
+                    app:placeholderText="@string/placeholder_full_name" />
+
+                <com.telkom.legion.component.textfield.LgnSingleField
+                    android:id="@+id/etJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_job"
+                    app:isRequired="true"
+                    app:placeholderText="@string/placeholder_job" />
+
+                <com.telkom.legion.component.radio.LgnPrimaryRadioContainer
+                    android:id="@+id/rcGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_24dp"
+                    android:hint="@string/label_gender"
+                    android:orientation="horizontal"
+                    app:isRequired="true">
+
+                    <com.telkom.legion.component.radio.LgnPrimaryRadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16dp"
+                        android:tag="male"
+                        android:text="@string/label_male" />
+
+                    <com.telkom.legion.component.radio.LgnPrimaryRadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_16dp"
+                        android:tag="female"
+                        android:text="@string/label_female" />
+                </com.telkom.legion.component.radio.LgnPrimaryRadioContainer>
+
+                <com.telkom.legion.component.textfield.LgnSingleField
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_phonenumber"
+                    android:inputType="number"
+                    app:isRequired="true"
+                    app:placeholderText="@string/placeholder_phone_number" />
+
+                <com.telkom.legion.component.textfield.LgnSingleField
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_email"
+                    app:isOptional="true"
+                    android:inputType="textEmailAddress"
+                    app:placeholderText="@string/placeholder_email" />
+
+                <com.telkom.legion.component.textfield.LgnSingleField
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_address"
+                    app:isRequired="true"
+                    app:placeholderText="@string/placeholder_address" />
+
+                <com.telkom.legion.component.textfield.LgnDropdownField
+                    android:id="@+id/etProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_province"
+                    app:isRequired="true"
+                    app:overrideDropdown="true"
+                    app:placeholderText="@string/placeholder_province" />
+
+                <com.telkom.legion.component.textfield.LgnDropdownField
+                    android:id="@+id/etDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_district"
+                    app:isRequired="true"
+                    app:overrideDropdown="true"
+                    app:placeholderText="@string/placeholder_district" />
+
+                <com.telkom.legion.component.textfield.LgnDropdownField
+                    android:id="@+id/etSubDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_sub_district"
+                    app:isRequired="true"
+                    app:overrideDropdown="true"
+                    app:placeholderText="@string/placeholder_sub_district" />
+
+                <com.telkom.legion.component.textfield.LgnDropdownField
+                    android:id="@+id/etVillage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_village"
+                    app:isRequired="true"
+                    app:overrideDropdown="true"
+                    app:placeholderText="@string/placeholder_village" />
+            </LinearLayout>
+
+        </com.telkom.legion.component.viewstate.LgnViewState>
+
+    </ScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="@dimen/dimen_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.telkom.legion.component.button.fill.LgnPrimaryFitButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:text="@string/action_save_changes" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

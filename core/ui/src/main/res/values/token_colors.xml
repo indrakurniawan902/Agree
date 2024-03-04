@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="customInfo500" format="color"/>
+    <attr name="customInfo700" format="color"/>
+</resources>

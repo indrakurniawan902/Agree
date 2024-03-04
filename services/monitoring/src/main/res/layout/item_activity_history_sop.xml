@@ -1,0 +1,32 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/spacing4"
+        android:textColor="@color/black"
+        android:textAppearance="?attr/bodySmallBold"
+        android:layout_marginStart="?attr/spacing4"
+        app:layout_constraintBottom_toTopOf="@id/rvItemActivitySop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Senin,2 " />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItemActivitySop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        android:layout_marginTop="?attr/spacing4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/sub_item_activity_sop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

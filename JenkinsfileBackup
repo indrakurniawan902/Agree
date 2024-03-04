@@ -1,0 +1,274 @@
+@Library('shared-library')_
+
+pipeline {
+
+    parameters {
+        string(name: 'CHAT_ID',                    description: 'chat id of telegram group',            defaultValue: '-1001215679728,-1001640088272')
+        string(name: 'NAME_APPS',                    description: 'name apps telegram',            defaultValue: 'agree-logtan-mobile-android')
+        string(name: 'CHAT_ID_PRIVATE',                    description: 'chat id of telegram group',            defaultValue: '-1001640088272')
+        choice(name: 'ENV', choices: ['Default', 'Dev', 'Staging', 'Prod'], description: 'Select Env to Generate Apk')
+    }
+
+    agent none
+
+    options {
+        skipDefaultCheckout()
+    }
+
+    stages {
+        stage ( "Kill old Build " ){
+            steps{
+                script{
+                    KillOldBuild()
+                }
+            }
+        }
+        stage('Pull Repository') {
+            agent { label "nodejs" }
+            steps {
+                deleteDir()
+                checkout scm
+                script {
+                    echo "get COMMIT_ID"
+                    sh 'echo -n $(git rev-parse --short HEAD) > ./commit-id'
+                    sh 'echo -n $( git log -1 --pretty=format:%s) > ./commit-status'
+                    commitId = readFile('./commit-id')
+                    sh "sed -i 's/<//g' commit-status && sed -i 's/>//g' commit-status "
+                    commitStatus = readFile('./commit-status')
+                    sh "cat ./commit-status"
+
+                }
+                stash(name: 'ws', includes:'**,./commit-id')
+            }
+        }
+
+        stage('Setup Enviroment') {
+            agent { label "nodejs" }
+            steps {
+                cleanWs()
+                script{
+                    unstash 'ws'
+
+                    sh "cp  build.gradle  build.versions && sed -i 's/\"//g' build.versions";
+                    def versionInfo = sh ( script: 'cat build.versions  | grep appVersion= | cut -d = -f 2 ',returnStdout: true).trim()
+
+                    sh "echo version : ${versionInfo}"
+
+                    if ( params.ENV == "Prod" ) {
+                        envBuild = "prod"
+                    } else if ( params.ENV == "Staging" ) {
+                        envBuild = "staging"
+                    } else if ( params.ENV == "Dev" ) {
+                        envBuild = "dev"
+                    } else if ( params.ENV == "Default" ) {
+                        envBuild = ""
+                    }
+
+                    sh "echo ParamsEnv : ${params.ENV}"
+
+                    basePath = "base/build/outputs"
+                    type = "universal_apk"
+
+                    if ( env.BRANCH_NAME == 'master' ){
+                        if ( params.ENV == "Default" ) {
+                            envBuild = "prod"
+                            generate="packageProdReleaseUniversalApk"
+                            generateDebug= "packageProdDebugUniversalApk"
+                            generateAab= "bundleProdRelease"
+                        } else {
+                            generate="package${params.ENV}ReleaseUniversalApk"
+                            generateDebug= "package${params.ENV}DebugUniversalApk"
+                            generateAab= "bundle${params.ENV}Release"
+                        }
+
+                        /**
+                            * File Configuration with env build
+                        */
+                        output="${basePath}/${type}/${envBuild}Release/Ecosystem-v${versionInfo}-${envBuild}.apk"
+                        outputDebug="${basePath}/${type}/${envBuild}Debug/Ecosystem-v${versionInfo}-${envBuild}-debug.apk"
+                        outputAab="${basePath}/bundle/${envBuild}/release/Ecosystem-v${versionInfo}-${envBuild}-release.aab"
+                        outputFile="${basePath}/${type}/${envBuild}Release/Ecosystem-v${versionInfo}-${envBuild}-release-universal.apk"
+                        outputFileDebug="${basePath}/${type}/${envBuild}Debug/Ecosystem-v${versionInfo}-${envBuild}-debug-universal.apk"
+
+                        envStage = "Production"
+                        artifactId= "production"
+                        unittest=""
+                    } else if ( env.BRANCH_NAME == 'release' ){
+                        if ( params.ENV == "Default" ) {
+                            envBuild = "staging"
+                            generate ="packageStagingReleaseUniversalApk"
+                            generateDebug= "packageStagingDebugUniversalApk"
+                            generateAab= "bundleStagingRelease"
+                        } else {
+                            generate="package${params.ENV}ReleaseUniversalApk"
+                            generateDebug= "package${params.ENV}DebugUniversalApk"
+                            generateAab= "bundle${params.ENV}Release"
+                        }
+
+                        /**
+                            * File Configuration with env build
+                        */
+                        output="${basePath}/${type}/${envBuild}Release/Ecosystem-v${versionInfo}-${envBuild}.apk"
+                        outputDebug="${basePath}/${type}/${envBuild}Debug/Ecosystem-v${versionInfo}-${envBuild}-debug.apk"
+                        outputAab="${basePath}/bundle/${envBuild}/release/Ecosystem-v${versionInfo}-${envBuild}-release.aab"
+                        outputFile="${basePath}/${type}/${envBuild}Release/Ecosystem-v${versionInfo}-${envBuild}-release-universal.apk"
+                        outputFileDebug="${basePath}/${type}/${envBuild}Debug/Ecosystem-v${versionInfo}-${envBuild}-debug-universal.apk"
+
+                        envStage = "Staging"
+                        artifactId= "staging"
+                        unittest=""
+                    } else if ( env.BRANCH_NAME == 'develop'){
+
+                        if ( params.ENV == "Default" ) {
+                            envBuild = "dev"
+                            generate="packageDevReleaseUniversalApk"
+                            generateDebug= "packageDevDebugUniversalApk"
+                            generateAab= "bundleDevRelease"
+                        } else {
+                            generate="package${params.ENV}ReleaseUniversalApk"
+                            generateDebug= "package${params.ENV}DebugUniversalApk"
+                            generateAab= "bundle${params.ENV}Release"
+                        }
+
+                        /**
+                            * File Configuration with env build
+                        */
+                        output="${basePath}/${type}/${envBuild}Release/Ecosystem-v${versionInfo}-${envBuild}.apk"
+                        outputDebug="${basePath}/${type}/${envBuild}Debug/Ecosystem-v${versionInfo}-${envBuild}-debug.apk"
+                        outputAab="${basePath}/bundle/${envBuild}/release/Ecosystem-v${versionInfo}-${envBuild}-release.aab"
+                        outputFile="${basePath}/${type}/${envBuild}Release/Ecosystem-v${versionInfo}-${envBuild}-release-universal.apk"
+                        outputFileDebug="${basePath}/${type}/${envBuild}Debug/Ecosystem-v${versionInfo}-${envBuild}-debug-universal.apk"
+
+                        envStage = "Development"
+                        artifactId= "development"
+                        unittest=""
+                    } else {
+                        envStage = "Development"
+                        artifactId= "development-${env.BRANCH_NAME}"
+                    }
+                    withCredentials([usernamePassword(credentialsId: 'nexus-credential', usernameVariable: 'username', passwordVariable: 'password')]) {
+                        sh "wget --user=${username} --password=${password} -O ecosystem-keystore.jks http://nexus3-nexus3-playcourt.vsan-apps.playcourt.id/repository/agree-logtan/agree-logtan/ecosystem/keystore/ecosystem-keystore.txt"
+                        sh "wget --user=${username} --password=${password} -O keystore.properties http://nexus3-nexus3-playcourt.vsan-apps.playcourt.id/repository/agree-logtan/agree-logtan/ecosystem/properties/ecosystem-properties.properties"
+                        sh "cat keystore.properties"
+                    }
+                    stash(name: 'ws', includes:'**')
+                }
+            }
+        }
+
+        stage('SonarQube Scan') {
+            agent { label "jenkins-agent-android-1" }
+            steps {
+                unstash 'ws'
+                echo "Run SonarQube"
+                script {
+                    // echo "defining sonar-scanner"
+                    sh "${unittest}"
+                    def scannerHome = tool 'SonarScanner' ;
+                    withSonarQubeEnv('SonarQube') {
+                        sh "${scannerHome}/bin/sonar-scanner"
+                    }
+
+
+
+                }
+            }
+        }
+
+        stage('Generate Apk Release') {
+            agent { label "jenkins-agent-android-1" }
+            environment {
+                GOOGLE_APPLICATION_CREDENTIALS = "${WORKSPACE}/credential.json"
+            }
+            steps {
+                script { sh "rm -R *" }
+                unstash 'ws'
+                echo "Run Generate APK Release"
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'nexus-credential', usernameVariable: 'username', passwordVariable: 'password')]) {
+//                         sh "./gradlew clean -Pnexus_username=${username} -Pnexus_password=${password}"
+                        sh "./gradlew ${generate}  -Pnexus_username=${username} -Pnexus_password=${password}"
+                        sh "mv ${outputFile} ${output}"
+                    }
+                }
+
+                stash(name: 'ws', includes:'**')
+            }
+        }
+
+        stage('Generate Apk Debug') {
+            agent { label "jenkins-agent-android-1" }
+            environment {
+                GOOGLE_APPLICATION_CREDENTIALS = "${WORKSPACE}/credential.json"
+            }
+            steps {
+                unstash 'ws'
+                echo "Run Generate APK Debug"
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'nexus-credential', usernameVariable: 'username', passwordVariable: 'password')]) {
+                        sh "./gradlew ${generateDebug}  -Pnexus_username=${username} -Pnexus_password=${password}"
+                        sh "mv ${outputFileDebug} ${outputDebug}"
+                    }
+                }
+
+                stash(name: 'ws', includes:'**')
+            }
+        }
+
+        stage('Generate AAB') {
+            agent { label "jenkins-agent-android-1" }
+            environment {
+                GOOGLE_APPLICATION_CREDENTIALS = "${WORKSPACE}/credential.json"
+            }
+            when {
+                branch 'master'
+            }
+            steps {
+                unstash 'ws'
+                echo "Run Generate AAB"
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'nexus-credential', usernameVariable: 'username', passwordVariable: 'password')]) {
+                        if ( env.BRANCH_NAME == 'master' ){
+                            sh "./gradl//                         sh "./gradlew clean"ew ${generateAab}  -Pnexus_username=${username} -Pnexus_password=${password}"
+                        }
+                    }
+                }
+
+                stash(name: 'ws', includes:'**')
+            }
+        }
+
+        stage('Send to telegram ') {
+            agent { label "nodejs" }
+            steps {
+                unstash 'ws'
+                echo "Run SonarQube"
+                script {
+                    echo "defining sonar-scanner"
+                    //  sh "./gradlew packageRelease"
+                    withCredentials([string(credentialsId: 'new-telegram-token', variable: 'TELEGRAM_TOKEN')]) {
+                        //    sh "cp   ${output}  ${params.NAME_APPS}-${env.BRANCH_NAME}.apk"
+                        sh "ls -alh"
+                        commitStatus = readFile('./commit-status')
+                        sh "curl -F document=@\"${output}\" https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendDocument?chat_id=${params.CHAT_ID_PRIVATE}"
+                        sh "curl -F document=@\"${outputDebug}\" https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendDocument?chat_id=${params.CHAT_ID_PRIVATE}"
+                        if ( env.BRANCH_NAME == 'master' ){
+                            sh "curl -F document=@\"${outputAab}\" https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendDocument?chat_id=${params.CHAT_ID_PRIVATE}"
+                        }
+                        sh "curl -s -X POST 'https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${params.CHAT_ID_PRIVATE}&text=${commitStatus}&parse_mode=HTML'"
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    post {
+        always{
+            node("Docker"){
+                TelegramNotif(currentBuild.currentResult)
+            }
+        }
+    }
+}

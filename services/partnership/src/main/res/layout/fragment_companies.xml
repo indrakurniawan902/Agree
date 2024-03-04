@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.telkom.legion.component.toolbar.LgnToolbarWhite
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_company_partner_list"
+        app:layout_scrollFlags="noScroll" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:liftOnScroll="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/fbSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexDirection="row_reverse"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvFilter"
+                        android:layout_width="@dimen/dimen_116dp"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="23dp"
+                        android:layout_marginEnd="@dimen/dimen_16dp"
+                        app:cardCornerRadius="@dimen/dimen_6dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="?attr/black_600"
+                        app:strokeWidth="@dimen/dimen_1dp">
+
+                        <ImageView
+                            android:id="@+id/ivFilter"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_filter" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.telkom.legion.component.textfield.LgnSingleField
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="-10dp"
+                        app:placeholderText="@string/placeholder_search_company"
+                        app:startIconDrawable="@drawable/ic_search" />
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.telkom.legion.component.chips.small.LgnSecondarySmallChipContainer
+                    android:id="@+id/cgCompanies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    app:chipType="DEFAULT_TYPE"
+                    app:closeIconVisible="true"
+                    app:isSingleLine="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fbSearch" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <com.telkom.legion.component.viewstate.LgnViewState
+                android:id="@+id/msvCompanies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:emptyView="@layout/layout_empty_company"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvListCompanies"
+                app:loadingView="@layout/layout_shimmer_companies"
+                app:viewState="content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvListCompanies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/black"
+                        android:layout_marginHorizontal="@dimen/dimen_16dp"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:text="@string/title_company_partner_list"
+                        android:textAppearance="?attr/bodySmallSemiBold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCompanies"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_12dp"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_company_partner" />
+
+                </LinearLayout>
+
+            </com.telkom.legion.component.viewstate.LgnViewState>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

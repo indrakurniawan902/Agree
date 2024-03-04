@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_16dp"
+    tools:ignore="ContentDescription">
+
+    <com.telkom.legion.component.image.LgnImageView
+        android:id="@+id/ivIconParameter"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_test_parameter_placeholder"
+        app:cache="AUTOMATIC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorTertiary_500" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvTestParameterStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        app:cardCornerRadius="@dimen/dimen_45dp"
+        app:cardElevation="@dimen/dimen_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="?attr/colorPrimary500"
+        app:strokeWidth="@dimen/dimen_1dp">
+        <TextView
+            android:id="@+id/tvTestParameterStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_12dp"
+            android:paddingVertical="@dimen/dimen_1dp"
+            android:text="@string/good"
+            android:textSize="@dimen/dimen_12sp"
+            android:textAppearance="?attr/captionSmallRegular"
+            android:textColor="?attr/colorPrimary500" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivIconParameter"
+        app:layout_constraintEnd_toStartOf="@+id/cvTestParameterStatus"
+        app:layout_constraintStart_toEndOf="@+id/ivIconParameter"
+        app:layout_constraintTop_toTopOf="@+id/ivIconParameter">
+
+        <TextView
+            android:id="@+id/tvTestParameterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dimen_6dp"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/colorTertiary_500"
+            app:drawableEndCompat="@drawable/ic_notification_alert"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/temperature_title" />
+
+        <TextView
+            android:id="@+id/tvTestParameterDataOfUnitNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/bodyLargeBold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="26° C" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

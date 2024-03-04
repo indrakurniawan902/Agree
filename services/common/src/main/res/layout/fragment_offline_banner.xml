@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.telkom.legion.component.accordion.LgnExpandableView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:isExpanded="false"
+    tools:context=".presentation.menu.home.offline.OfflineBannerFragment"
+    tools:isExpanded="true">
+
+    <LinearLayout
+        android:id="@+id/containerContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/customInfo500"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/label_title_offline_banner_home"
+            android:textAppearance="?attr/bodySmallBold"
+            android:textColor="?attr/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/label_desc_offline_banner_home"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/white" />
+    </LinearLayout>
+
+</com.telkom.legion.component.accordion.LgnExpandableView>

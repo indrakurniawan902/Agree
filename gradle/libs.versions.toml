@@ -1,0 +1,231 @@
+[versions]
+# Android Frameworks Version
+desugar = "1.1.5"
+coroutines = "1.6.4"
+core-ktx = "1.9.0"
+appcompat = "1.5.0"
+swipe-refresh = "1.1.0"
+material = "1.7.0"
+constraintlayout = "2.1.4"
+lifecycle = "2.5.1"
+android-viewbinding = "3.24.4"
+jetpack-navigation = "2.4.2"
+play-core = "1.10.3"
+play-core-ktx = "1.8.1"
+legacy-support = "1.0.0"
+splash-api = "1.0.0-beta02"
+
+# Kotlin Version
+kotlin-version = "1.7.21"
+
+# Firebase
+firebase = "29.0.4"
+firebase-messaging = "23.1.0"
+
+# Telkom Libraries Version
+telkom-codebase = "1.0.0"
+telkom-codebase-presentation = "1.0.1"
+telkom-legion = "1.35.5-dev8"
+telkom-legion-agr = "0.3.0"
+
+# 3rd Party Library
+jwt = "2.0.1"
+rxbinding = "3.0.0"
+dotsindicator = "4.3"
+flexbox = "3.0.0"
+room = "2.5.1"
+sqlcipher = "4.5.2"
+paris                           = "2.0.0"
+chucker                         = "3.5.2"
+pluto                           = "2.1.4"
+retrofit-progressmanager        = "1.5.0"
+retrofit-urlmanager             = "1.4.0"
+calendar-view                   = "1.0.4"
+restring                        = "5.2.2"
+applocale                       = "3.0.0"
+viewpump                        = "4.0.10"
+reword                          = "4.0.2"
+blankj                          = "1.31.0"
+koin                            = "3.4.2"
+koin-android                    = "3.4.2"
+
+[libraries]
+# Coroutine Section
+kotlin-coroutine                = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+android-coroutine               = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Android Frameworks Section
+core-ktx                        = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+appcompat                       = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material                        = { module = "com.google.android.material:material", version.ref = "material" }
+constraintlayout                = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+lifecycle-runtime               = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "lifecycle" }
+lifecycle-viewmodel             = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycle" }
+swipe-refresh                   = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swipe-refresh" }
+android-viewbinding             = { module = "com.oratakashi:AndroidViewBinding", version.ref = "android-viewbinding" }
+navigation-fragment             = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "jetpack-navigation" }
+navigation-ui                   = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "jetpack-navigation" }
+play-core                       = { module = "com.google.android.play:core", version.ref = "play-core" }
+play-core-ktx                   = { module = "com.google.android.play:core-ktx", version.ref = "play-core-ktx" }
+legacy-support                  = { module = "androidx.legacy:legacy-support-v4", version.ref = "legacy-support" }
+splash-api                      = { module = "androidx.core:core-splashscreen", version.ref = "splash-api" }
+
+# Kotlin Reflection Section
+kotlin-reflect                  = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin-version" }
+kotlin-stdlib                   = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin-version" }
+
+# Telkom Codebase Section
+telkom-codebase                 = { module = "android:codebase", version.ref = "telkom-codebase" }
+telkom-codebase-data            = { module = "android:codebase-data" }
+telkom-codebase-presentation    = { module = "android:codebase-presentation", version.ref = "telkom-codebase-presentation" }
+telkom-codebase-utils           = { module = "android:codebase-utils" }
+
+# Telkom Legion Section
+telkom-legion                   = { module = "com.telkom.legion:android-platform", version.ref = "telkom-legion" }
+telkom-legion-component         = { module = "com.telkom.legion:android-component" }
+telkom-legion-extension         = { module = "com.telkom.legion:android-extension" }
+telkom-legion-theme             = { module = "com.telkom.legion:android-theme-agr", version.ref = "telkom-legion-agr" }
+
+# Firebase Section
+android-firebase                = { module = "com.google.firebase:firebase-bom", version.ref = "firebase" }
+firebase-analtytics             = { module = "com.google.firebase:firebase-analytics-ktx" }
+firebase-crashlytics            = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-prefs                  = { module = "com.google.firebase:firebase-perf" }
+firebase-messaging              = { module = "com.google.firebase:firebase-messaging-ktx", version.ref = "firebase-messaging" }
+firebase-remote-config          = { module = "com.google.firebase:firebase-config-ktx" }
+
+# Room Database Section
+room                            = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler                   = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-rx2                        = { module = "androidx.room:room-rxjava2", version.ref = "room" }
+room-sqlcipher                  = { module = "net.zetetic:android-database-sqlcipher", version.ref = "sqlcipher" }
+
+# 3rd Library Section
+jwt                             = { module = "com.auth0.android:jwtdecode", version.ref = "jwt" }
+rxbinding                       = { module = "com.jakewharton.rxbinding3:rxbinding", version.ref = "rxbinding" }
+dotsindicator                   = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }
+flexbox                         = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+paris                           = { module = "com.airbnb.android:paris", version.ref = "paris" }
+paris-compiler                  = { module = "com.airbnb.android:paris-processor", version.ref = "paris" }
+retrofit-progressmanager        = { module = "com.github.JessYanCoding:ProgressManager", version.ref = "retrofit-progressmanager" }
+retrofit-urlmanager             = { module = "com.github.JessYanCoding:RetrofitUrlManager", version.ref = "retrofit-urlmanager" }
+calendar-view                   = { module = "com.github.kizitonwose:CalendarView", version.ref = "calendar-view" }
+blankj                          = { module = "com.blankj:utilcodex", version.ref = "blankj" }
+koin                            = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android                    = { module = "io.insert-koin:koin-android", version.ref = "koin-android" }
+
+restring = { module = "dev.b3nedikt.restring:restring", version.ref = "restring" }
+applocale = { module = "dev.b3nedikt.applocale:applocale", version.ref = "applocale" }
+viewpump = { module = "dev.b3nedikt.viewpump:viewpump", version.ref = "viewpump" }
+reword = { module = "dev.b3nedikt.reword:reword", version.ref = "reword" }
+
+# Pluto Library Section
+pluto = { module = "com.plutolib:pluto", version.ref = "pluto" }
+pluto-noop = { module = "com.plutolib:pluto-no-op", version.ref = "pluto" }
+pluto-exception = { module = "com.plutolib.plugins:exceptions", version.ref = "pluto" }
+pluto-exception-noop = { module = "com.plutolib.plugins:exceptions-no-op", version.ref = "pluto" }
+pluto-rooms = { module = "com.plutolib.plugins:rooms-db", version.ref = "pluto" }
+pluto-rooms-noop = { module = "com.plutolib.plugins:rooms-db-no-op", version.ref = "pluto" }
+pluto-preferences = { module = "com.plutolib.plugins:preferences", version.ref = "pluto" }
+pluto-preferences-noop = { module = "com.plutolib.plugins:preferences-no-op", version.ref = "pluto" }
+pluto-layout-inspector = { module = "com.plutolib.plugins:layout-inspector", version.ref = "pluto" }
+pluto-layout-inspector-noop = { module = "com.plutolib.plugins:layout-inspector-no-op", version.ref = "pluto" }
+
+[bundles]
+coroutine-base = [
+    "kotlin-coroutine",
+    "android-coroutine",
+]
+
+android-framework = [
+    "core-ktx",
+    "appcompat",
+    "material",
+    "android-viewbinding",
+    "swipe-refresh",
+    "splash-api"
+]
+
+android-playcore = [
+    "play-core",
+    "play-core-ktx",
+    "legacy-support",
+]
+
+android-lifecycle = [
+    "lifecycle-runtime",
+    "lifecycle-viewmodel",
+]
+
+android-navigation = [
+    "navigation-fragment",
+    "navigation-ui",
+]
+
+android-firebase = [
+    "firebase-analtytics",
+    "firebase-crashlytics",
+    "firebase-messaging",
+    "firebase-prefs",
+    "firebase-remote-config",
+]
+
+android-kotlin = [
+    "kotlin-reflect",
+    "kotlin-stdlib"
+]
+
+telkom-codebase = [
+    "telkom-codebase-data",
+    "telkom-codebase-presentation",
+    "telkom-codebase-utils",
+]
+
+telkom-legion = [
+    "telkom-legion-component",
+    "telkom-legion-extension",
+    "telkom-legion-theme",
+]
+
+rx = [
+    "rxbinding"
+]
+
+room = [
+    "room",
+    "room-rx2",
+    "room-sqlcipher",
+]
+
+retrofit-utility = [
+    "retrofit-progressmanager",
+    "retrofit-urlmanager",
+]
+
+locales = [
+    "restring",
+    "applocale",
+    "viewpump",
+    "reword"
+]
+
+pluto = [
+    "pluto",
+    "pluto-exception",
+    "pluto-rooms",
+    "pluto-preferences",
+    "pluto-layout-inspector",
+]
+
+pluto-noop = [
+    "pluto-noop",
+    "pluto-exception-noop",
+    "pluto-rooms-noop",
+    "pluto-preferences-noop",
+    "pluto-layout-inspector-noop",
+]
+
+koin                        = [
+    "koin",
+    "koin-android"
+]

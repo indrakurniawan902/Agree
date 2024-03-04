@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_insert_additional_activity_sop"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/insertAdditionalActivitySop">
+
+    <fragment
+        android:id="@+id/insertAdditionalActivitySop"
+        android:name="com.agree.ecosystem.monitoring.presentation.menu.insertupdateadditionalactivitysop.InsertUpdateAdditionalActivitySopFragment"
+        android:label="InsertAdditionalActivitySop"
+        tools:layout="@layout/fragment_insert_additional_activity_sop">
+    </fragment>
+
+</navigation>

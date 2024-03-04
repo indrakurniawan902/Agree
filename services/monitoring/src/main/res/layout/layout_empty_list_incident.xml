@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_200"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/dimen_48dp"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:src="@drawable/ic_sad" />
+
+    <TextView
+        android:id="@+id/tvTitleEmptyListSubVessel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/label_title_empty_list_incident"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textAppearance="?attr/bodySmallBold" />
+
+    <TextView
+        android:id="@+id/tvDescEmptyListSubVessel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/label_description_empty_list_empty"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textAppearance="@style/CaptionLargeRegular" />
+
+
+</LinearLayout>

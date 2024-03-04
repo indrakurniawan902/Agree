@@ -1,0 +1,20 @@
+android {
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+dependencies {
+    implementation project(":core:utils")
+
+    implementation libs.bundles.room
+    ksp(libs.room.compiler)
+
+    //Pluto Debugger
+    debugImplementation libs.bundles.pluto
+    releaseImplementation libs.bundles.pluto.noop
+
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${libs.versions.desugar.get()}"
+}

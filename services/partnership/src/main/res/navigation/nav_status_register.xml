@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_status_register"
+    app:startDestination="@id/poultryDetailStatusRegisterFragment">
+
+    <fragment
+        android:id="@+id/poultryDetailStatusRegisterFragment"
+        android:name="com.agree.ecosystem.partnership.presentation.menu.statusregistration.detail.DetailStatusRegisterFragment"
+        android:label="fragment_poultry_detail_status_register"
+        tools:layout="@layout/fragment_detail_status_register" >
+        <argument
+            android:name="submissionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
+</navigation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/selector_home"
+        android:title="@string/menu_home"
+        app:actionViewClass="android.widget.ImageButton"/>
+
+    <item
+        android:id="@+id/partnershipListFragment"
+        android:icon="@drawable/selector_partnership"
+        android:title="@string/menu_partnership" />
+
+    <item
+        android:id="@+id/monitoringFragment"
+        android:icon="@drawable/selector_monitoring"
+        android:title="@string/menu_monitoring"/>
+
+    <item
+        android:id="@+id/notificationsFragment"
+        android:icon="@drawable/selector_notification"
+        android:title="@string/menu_notifications" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/selector_setting"
+        android:title="@string/menu_settings" />
+</menu>

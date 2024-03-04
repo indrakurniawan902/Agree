@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AgreeEcosystem.Poultry" parent="Agree">
+        <item name="colorSecondary700">@color/poultry_70</item>
+        <item name="colorSecondary600">@color/poultry_60</item>
+        <item name="colorSecondary500">@color/poultry_50</item>
+        <item name="colorSecondary400">@color/poultry_40</item>
+        <item name="colorSecondary300">@color/poultry_30</item>
+        <item name="colorSecondary200">@color/poultry_20</item>
+        <item name="colorSecondary100">@color/poultry_10</item>
+    </style>
+    <style name="Theme.AgreeEcosystem.Sample" parent="Agree">
+        <item name="colorPrimary700">@color/aqf_pressed</item>
+        <item name="colorPrimary600">@color/aqf_hover</item>
+        <item name="colorPrimary500">@color/aqf_normal</item>
+        <item name="colorPrimary400">@color/aqf_40</item>
+        <item name="colorPrimary300">@color/aqf_30</item>
+        <item name="colorPrimary200">@color/aqf_20</item>
+        <item name="colorPrimary100">@color/aqf_10</item>
+        <item name="colorSecondary700">@color/poultry_70</item>
+        <item name="colorSecondary600">@color/poultry_60</item>
+        <item name="colorSecondary500">@color/poultry_50</item>
+        <item name="colorSecondary400">@color/poultry_40</item>
+        <item name="colorSecondary300">@color/poultry_30</item>
+        <item name="colorSecondary200">@color/poultry_20</item>
+        <item name="colorSecondary100">@color/poultry_10</item>
+    </style>
+</resources>

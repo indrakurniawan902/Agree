@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_16dp">
+
+        <TextView
+            android:id="@+id/tvGoodsName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/bodySmallRegular"
+            android:textColor="?attr/colorTertiary_200"
+            app:layout_constraintEnd_toStartOf="@+id/btnCountDecrease"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Jagung (1 ton)" />
+
+        <TextView
+            android:id="@+id/tvGoodsPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="?attr/colorPrimary500"
+            app:layout_constraintEnd_toStartOf="@+id/btnCountDecrease"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGoodsName"
+            tools:text="Rp. 2.000.000,-" />
+
+        <ImageButton
+            android:id="@+id/btnCountDecrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_6dp"
+            android:background="@color/white"
+            android:src="@drawable/selector_button_dec"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/etCount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_6dp"
+            android:inputType="number"
+            android:paddingHorizontal="@dimen/dimen_16dp"
+            android:text="@string/lbl_0"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnCountIncrease"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnCountIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintBottom_toBottomOf="@+id/etCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etCount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.telkom.legion.component.dividers.LgnDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

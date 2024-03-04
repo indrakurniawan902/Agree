@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen_16dp"
+    android:layout_marginVertical="@dimen/dimen_4dp"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardElevation="@dimen/dimen_6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/agr_white">
+
+        <TextView
+            android:id="@+id/tvTitleLabel"
+            style="@style/CaptionLargeBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Area Sukabumi Jaya" />
+
+        <TextView
+            android:id="@+id/tvTextAreaLabel"
+            style="@style/CaptionLargeRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:text="@string/title_location_area"
+            android:textColor="@color/black_font"
+            app:layout_constraintEnd_toStartOf="@+id/tvTextSurfaceAreaUsedLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleLabel" />
+
+        <TextView
+            android:id="@+id/tvTextAreaValue"
+            style="@style/CaptionLargeSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textColor="@color/info_500"
+            app:layout_constraintStart_toStartOf="@+id/tvTextAreaLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvTextAreaLabel"
+            tools:text="200Ha" />
+
+        <TextView
+            android:id="@+id/tvTextSurfaceAreaUsedLabel"
+            style="@style/CaptionLargeRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_used_area_surface"
+            android:textColor="@color/black_font"
+            app:layout_constraintEnd_toStartOf="@+id/tvTextLocationLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvTextAreaLabel"
+            app:layout_constraintTop_toTopOf="@+id/tvTextAreaLabel" />
+
+        <TextView
+            android:id="@+id/tvTextSurfaceAreaUsedValue"
+            style="@style/CaptionLargeSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textColor="@color/info_500"
+            app:layout_constraintStart_toStartOf="@+id/tvTextSurfaceAreaUsedLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvTextSurfaceAreaUsedLabel"
+            tools:text="150Ha" />
+
+        <TextView
+            android:id="@+id/tvTextLocationLabel"
+            style="@style/CaptionLargeRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:text="@string/label_location"
+            android:textColor="@color/black_font"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvTextSurfaceAreaUsedLabel"
+            app:layout_constraintTop_toTopOf="@+id/tvTextSurfaceAreaUsedLabel" />
+
+        <TextView
+            android:id="@+id/tvTextLocationValue"
+            style="@style/CaptionLargeSemiBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textColor="@color/info_500"
+            app:layout_constraintEnd_toEndOf="@+id/tvTextLocationLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvTextLocationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvTextLocationLabel"
+            tools:text="Sukabumi" />
+
+        <include
+            android:id="@+id/iLayoutVesselRejectedReason"
+            layout="@layout/layout_rejected_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginVertical="@dimen/dimen_8dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvTextLocationValue"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSubVessel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/iLayoutVesselRejectedReason"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_data_sub_vessels_detail_inbox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

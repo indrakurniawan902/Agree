@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Agree.Light" parent="Agree">
+
+    </style>
+
+    <!--  Agree Light  -->
+    <style name="Agree.Dark" parent="Agree">
+
+    </style>
+
+    <!--  Agree Dark  -->
+    <style name="Agree" parent="AgreeCulture">
+
+        <item name="android:ambientShadowAlpha">0.056</item>
+        <item name="android:spotShadowAlpha">0.056</item>
+        <!-- Radius -->
+        <item name="radius0">@dimen/dimen_0dp</item>
+        <item name="radius2">@dimen/dimen_2dp</item>
+        <item name="radius3">@dimen/dimen_4dp</item>
+        <item name="radius4">@dimen/dimen_6dp</item>
+        <item name="radius5">@dimen/dimen_8dp</item>
+        <item name="radius6">@dimen/dimen_12dp</item>
+        <item name="radius7">@dimen/dimen_16dp</item>
+        <item name="radius8">@dimen/dimen_24dp</item>
+        <item name="radius9">@dimen/dimen_30dp</item>
+        <!-- Shape -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.LargeComponent</item>
+        <!-- Spacing -->
+        <item name="spacingNone">@dimen/dimen_0dp</item>
+        <item name="spacing0">@dimen/dimen_1dp</item>
+        <item name="spacing1">@dimen/dimen_4dp</item>
+        <item name="spacing2">@dimen/dimen_8dp</item>
+        <item name="spacing3">@dimen/dimen_12dp</item>
+        <item name="spacing4">@dimen/dimen_16dp</item>
+        <item name="spacing5">@dimen/dimen_20dp</item>
+        <item name="spacing6">@dimen/dimen_24dp</item>
+        <item name="spacing7">@dimen/dimen_28dp</item>
+        <item name="spacing8">@dimen/dimen_32dp</item>
+        <item name="spacing9">@dimen/dimen_36dp</item>
+        <item name="spacing10">@dimen/dimen_40dp</item>
+        <item name="spacing11">@dimen/dimen_48dp</item>
+        <item name="spacing12">@dimen/dimen_56dp</item>
+        <item name="spacing13">@dimen/dimen_64dp</item>
+        <item name="spacing14">@dimen/dimen_80dp</item>
+        <item name="spacing15">@dimen/dimen_96dp</item>
+        <item name="spacing16">@dimen/dimen_112dp</item>
+        <item name="spacing17">@dimen/dimen_128dp</item>
+        <item name="spacing18">@dimen/dimen_144dp</item>
+        <item name="spacing19">@dimen/dimen_160dp</item>
+        <item name="spacing20">@dimen/dimen_176dp</item>
+        <item name="spacing21">@dimen/dimen_192dp</item>
+        <item name="spacing22">@dimen/dimen_208dp</item>
+        <item name="spacing23">@dimen/dimen_224dp</item>
+        <item name="spacing24">@dimen/dimen_240dp</item>
+        <item name="spacing25">@dimen/dimen_256dp</item>
+        <item name="spacing26">@dimen/dimen_288dp</item>
+        <item name="spacing27">@dimen/dimen_320dp</item>
+        <item name="spacing28">@dimen/dimen_384dp</item>
+
+        <!--    Custom Colors    -->
+        <item name="customInfo500">@color/custom_info_500</item>
+        <item name="customInfo700">@color/custom_info_700</item>
+
+    </style>
+</resources>

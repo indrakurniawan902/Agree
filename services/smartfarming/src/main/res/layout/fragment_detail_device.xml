@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.menu.detaildevice.DetailDeviceFragment">
+
+    <com.telkom.legion.component.toolbar.LgnToolbarWhite
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetEnd="@dimen/dimen_16dp"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/foo" />
+
+    <com.telkom.legion.component.dividers.LgnDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerColor="?attr/colorTertiary_50"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_scrollFlags="scroll">
+
+                <TextView
+                    android:id="@+id/tvTitleInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    tools:text="@string/title_info_fishery"
+                    android:textAppearance="?attr/bodySmallSemiBold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    app:cardCornerRadius="@dimen/dimen_8dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="?attr/colorTertiary_100"
+                    app:strokeWidth="@dimen/dimen_1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dimen_16dp">
+
+                        <View
+                            android:id="@+id/vSeparator"
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:background="?attr/colorTertiary_100"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvTitleSubVesselName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_16dp"
+                            android:drawablePadding="@dimen/dimen_5dp"
+                            tools:text="@string/foo"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            app:drawableStartCompat="@drawable/ic_subvessel_name"
+                            app:layout_constraintEnd_toStartOf="@+id/vSeparator"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/vSeparator" />
+
+                        <TextView
+                            android:id="@+id/tvSubVesselName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_16dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            tools:text="@string/foo"
+                            android:textAppearance="?attr/captionLargeSemiBold"
+                            android:textColor="?attr/black"
+                            app:layout_constraintEnd_toStartOf="@+id/vSeparator"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitleSubVesselName" />
+
+                        <TextView
+                            android:id="@+id/tvTitleCultivatorName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_16dp"
+                            android:drawablePadding="@dimen/dimen_5dp"
+                            tools:text="@string/foo"
+                            android:textAppearance="?attr/captionLargeRegular"
+                            app:drawableStartCompat="@drawable/ic_cultivator_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/vSeparator" />
+
+                        <TextView
+                            android:id="@+id/tvCultivatorName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_16dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            tools:text="@string/foo"
+                            android:textAlignment="textEnd"
+                            android:textColor="?attr/black"
+                            android:textAppearance="?attr/captionLargeSemiBold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/vSeparator"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitleCultivatorName" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabSmartFarming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailSmartfarmingTabs"
+                app:layout_scrollFlags="enterAlways"
+                app:tabInlineLabel="true" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpSmartFarming"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

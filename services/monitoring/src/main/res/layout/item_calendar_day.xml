@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerItemCalendarDay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="?attr/spacing1">
+    <TextView
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:id="@+id/tvCalendarDay"
+        android:layout_width="@dimen/dimen_24dp"
+        android:layout_height="@dimen/dimen_24dp"
+        android:textColor="?attr/black_font"
+        android:textAppearance="?attr/captionLargeRegular"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="99"/>
+
+    <ImageView
+        android:id="@+id/imgEventDotCalendar"
+        android:layout_width="@dimen/dimen_8dp"
+        android:layout_height="@dimen/dimen_8dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:src="@drawable/ic_event_dot_calendar"
+        android:layout_marginTop="?attr/spacing1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/tvCalendarDay"
+        app:layout_constraintStart_toStartOf="@id/tvCalendarDay"
+        app:layout_constraintEnd_toEndOf="@id/tvCalendarDay"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

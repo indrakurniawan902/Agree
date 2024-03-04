@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AgreeEcosystem" parent="Agree.Light">
+        <item name="colorSecondary">@color/primary_500</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+</resources>

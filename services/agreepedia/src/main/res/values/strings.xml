@@ -1,0 +1,26 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_category_filters">Filter Kategori</string>
+    <string name="label_sort_from">Urutkan dari</string>
+    <string name="label_latest">Terbaru</string>
+    <string name="label_oldest">Terlama</string>
+    <string name="label_sector">Sektor</string>
+    <string name="label_see_all">Lihat Semua</string>
+    <string name="label_agriculture">Pertanian</string>
+    <string name="label_fishery">Perikanan</string>
+    <string name="label_livestock">Peternakan</string>
+    <string name="label_agreepedia">Agreepedia</string>
+    <string name="label_agreepedia_article">Artikel Agreepedia</string>
+    <string name="label_agreepedia_article_description">Baca berbagai informasi terbaru seputar agrikultur untuk meningkatkan pemahamanmu!</string>
+    <string name="placeholder_search_article">Cari artikel disini</string>
+    <string name="label_search_result_agreepedia">Menampilkan dengan hasil pencarian kata</string>
+    <string name="label_keyword">keyword</string>
+    <string name="title_agreepedia_detail">Detail Artikel</string>
+    <string name="label_agreepedia_separator">|</string>
+    <string name="label_agreepedia_by">oleh\u00A0%s</string>
+    <string name="label_agreepedia_not_found">Artikel Tidak Ditemukan</string>
+    <string name="label_desc_empty_article">Untuk melihat artikel kunjungi website Agrepedia.</string>
+    <string name="label_search_not_found">Pencarian Tidak ditemukan</string>
+    <string name="label_search_not_found_desc">Silahkan masukkan kata pencarian lain</string>
+</resources>

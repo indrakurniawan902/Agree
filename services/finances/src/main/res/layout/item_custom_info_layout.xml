@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dimen_16dp">
+
+    <RelativeLayout
+        android:id="@+id/containerLeft"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/containerRight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.telkom.legion.component.image.LgnImageView
+            android:id="@+id/icLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_7dp"
+            android:layout_toEndOf="@+id/tvTitleLeft"
+            android:src="@drawable/ic_help_circle" />
+
+        <TextView
+            android:id="@+id/tvTitleLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bunga" />
+
+        <TextView
+            android:id="@+id/tvValueTitleLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleLeft"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/colorPrimary500"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleLeft"
+            tools:text="10 %" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerRight"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/containerLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.telkom.legion.component.image.LgnImageView
+            android:id="@+id/icRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_7dp"
+            android:layout_toEndOf="@+id/tvTitleRight"
+            android:src="@drawable/ic_help_circle" />
+
+        <TextView
+            android:id="@+id/tvTitleRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bunga" />
+
+        <TextView
+            android:id="@+id/tvValueTitleRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleRight"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="?attr/colorPrimary500"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleRight"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleRight"
+            tools:text="10 %" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

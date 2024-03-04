@@ -1,0 +1,18 @@
+android {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation project(":services:utilities")
+    implementation libs.bundles.room
+    ksp(libs.room.compiler)
+
+    //Pluto Debugger
+    debugImplementation libs.bundles.pluto
+    releaseImplementation libs.bundles.pluto.noop
+}
+
+apply from: '../../ktlint.gradle'
+check.dependsOn ktlint

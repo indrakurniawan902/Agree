@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_detail_activity_sop"
+    app:startDestination="@id/detailActivitySop">
+
+    <fragment
+        android:id="@+id/detailActivitySop"
+        android:name="com.agree.ecosystem.monitoring.presentation.menu.detailactivitysop.DetailActivitySopFragment"
+        android:label="DetailActivitySop"
+        tools:layout="@layout/fragment_detail_activity_sop">
+        <action
+            android:id="@+id/action_detailActivitySop_to_individualMonitoringFragment"
+            app:destination="@id/individualMonitoringFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <argument
+            android:name="individualSubVessel"
+            app:argType="com.agree.ecosystem.monitoring.domain.reqres.model.subvesselIndividual.IndividualSubVessel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_detailActivitySop_to_activitySummaryFragment"
+            app:destination="@id/activitySummaryFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"
+            app:popUpTo="@id/individualMonitoringFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/individualMonitoringFragment"
+        android:name="com.agree.ecosystem.monitoring.presentation.menu.detailactivitysop.individual.IndividualMonitoringFragment"
+        android:label="IndividualMonitoring"
+        tools:layout="@layout/fragment_individual_monitoring">
+        <action
+            android:id="@+id/action_individualMonitoringFragment_to_detailActivitySop"
+            app:destination="@id/detailActivitySop"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <argument
+            android:name="subVesselId"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="activityName"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="guideContent"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="date"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/activitySummaryFragment"
+        android:name="com.agree.ecosystem.monitoring.presentation.menu.detailactivitysop.summary.ActivitySummaryFragment"
+        android:label="fragment_activity_summary"
+        tools:layout="@layout/fragment_activity_summary" >
+        <argument
+            android:name="activityName"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="formItems"
+            app:argType="com.agree.ui.data.reqres.model.FormItem[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+</navigation>

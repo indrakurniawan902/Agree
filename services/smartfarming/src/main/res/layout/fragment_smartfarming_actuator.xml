@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.menu.actuator.ActuatorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.telkom.legion.component.alert.LgnAlert
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Feature under development"
+            app:description="This feature is under development, please wait for the next update"
+            app:alertType="ERROR"
+            app:isDismissible="false"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

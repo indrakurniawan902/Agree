@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.telkom.legion.component.alert.LgnAlert
+        android:id="@+id/laRecommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        app:actionText="@string/title_flush_now"
+        app:alertType="ERROR"
+        app:description="@string/foo"
+        app:isDismissible="false"
+        app:layout_constraintStart_toEndOf="@+id/llLeft"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:showIcon="false"
+        app:title="@string/title_recommendation" />
+
+
+</LinearLayout>

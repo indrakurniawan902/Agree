@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_16dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/black_300"
+    app:strokeWidth="@dimen/dimen_1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginVertical="@dimen/dimen_12dp">
+
+
+        <TextView
+            android:id="@+id/tvNameCommodity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textAppearance="?attr/bodySmallBold"
+            android:textColor="?attr/black_100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="PT. Agreeculture" />
+
+        <TextView
+            android:id="@+id/tvPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_8dp"
+            android:textAppearance="?attr/bodySmallBold"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNameCommodity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvNameCommodity"
+            app:layout_constraintTop_toTopOf="@+id/tvNameCommodity"
+            tools:text="(20%)" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:progress="10"
+            android:progressDrawable="@drawable/custom_linear_progress"
+            app:layout_constraintEnd_toEndOf="@+id/tvNameCommodity"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvNameCommodity"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameCommodity" />
+
+        <TextView
+            android:id="@+id/tvLabelTarget"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:text="@string/label_target_ton"
+            android:textAppearance="?attr/bodySmallRegular"
+            app:layout_constraintEnd_toStartOf="@+id/tvLabelProduction"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+        <TextView
+            android:id="@+id/tvTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            app:layout_constraintEnd_toEndOf="@+id/tvLabelTarget"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelTarget"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelTarget"
+            tools:text="1000kg" />
+
+        <TextView
+            android:id="@+id/tvLabelProduction"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:text="@string/label_production_ton"
+            android:textAppearance="?attr/bodySmallRegular"
+            app:layout_constraintEnd_toStartOf="@+id/tvLabelRealization"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelTarget"
+            app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+        <TextView
+            android:id="@+id/tvProduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            app:layout_constraintEnd_toEndOf="@+id/tvLabelProduction"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelProduction"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelProduction"
+            tools:text="250kg" />
+
+        <TextView
+            android:id="@+id/tvLabelRealization"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:text="@string/label_realization_ton"
+            android:textAppearance="?attr/bodySmallRegular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelProduction"
+            app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+        <TextView
+            android:id="@+id/tvRealization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            app:layout_constraintEnd_toEndOf="@+id/tvLabelRealization"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelRealization"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelRealization"
+            tools:text="250kg" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

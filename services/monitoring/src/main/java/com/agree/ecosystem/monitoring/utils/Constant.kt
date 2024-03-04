@@ -1,0 +1,25 @@
+package com.agree.ecosystem.monitoring.utils
+
+object Constant {
+    const val SOP_DETAIL_KEY = "sop detail key"
+    const val INSERT_STATUS_PRIMARY = "primary"
+    const val INSERT_STATUS_ADDITIONAL = "additional"
+    const val ID_BUNDLE_KEY = "id bundle"
+    const val GUIDE_CONTENT_BUNDLE_KEY = "guide content"
+    const val NAV_ADDITIONAL_ACTIVITY_PARAMS_BUNDLE = "navAdditionalActivityParams"
+    const val PHASE_ID_KEY = "phase id"
+    const val ORDER_BUNDLE_KEY = "order"
+    const val DATE_BUNDLE_KEY = "date"
+    const val ACTIVITY_NAME_BUNDLE_KEY = "activity name"
+    const val FILTER_HISTORY_COMPLETED = "completed"
+    const val STATUS_ACTIVE = "active"
+    const val STATUS_INACTIVE = "inactive"
+    const val FILTER_HISTORY_MISSED = "missed"
+    const val PHASE_NAME_BUNDLE_KEY = "phase name"
+    const val FORM_SCHEMA_BUNDLE_KEY = "form schema"
+    const val IS_INSERT_BUNDLE_KEY = "is insert"
+    const val INDIVIDUAL_ID = "individual id"
+    const val RECORD_TYPE_BUNDLE_KEY = "is record type"
+    const val TYPE_BUNDLE_KEY = "type"
+    const val IS_EDIT_BUNDLE_KEY = "is edit"
+}

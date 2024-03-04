@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	app:cardBackgroundColor="?attr/black_25"
+	android:layout_marginVertical="@dimen/dimen_2dp"
+	app:cardCornerRadius="@dimen/dimen_8dp"
+	app:cardElevation="@dimen/dimen_0dp"
+	app:strokeColor="?attr/black_200"
+	app:strokeWidth="@dimen/dimen_1dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/tvAreaName"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:textAppearance="?attr/captionLargeBold"
+			android:textColor="?attr/black"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="Area Sukabumi Jaya" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/clAreaDetail"
+			android:layout_width="@dimen/dimen_0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			app:layout_constraintStart_toStartOf="@id/tvAreaName"
+			app:layout_constraintTop_toBottomOf="@id/tvAreaName"
+			app:layout_constraintEnd_toEndOf="@id/tvAreaName">
+
+		<TextView
+			android:id="@+id/tvFarmAreaLabel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/dimen_4dp"
+			android:text="@string/label_wide_area"
+			android:textAppearance="?attr/captionLargeRegular"
+			android:textColor="?attr/black_font"
+			app:layout_constraintEnd_toStartOf="@+id/tvAreaUsedLabel"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/tvAreaUsedLabel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dimen_4dp"
+			android:text="@string/label_area_used"
+			android:textAppearance="?attr/captionLargeRegular"
+			android:textColor="?attr/black_font"
+			app:layout_constraintEnd_toStartOf="@+id/tvLocationLabel"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/tvFarmAreaLabel"
+			app:layout_constraintTop_toTopOf="@id/tvFarmAreaLabel" />
+
+		<TextView
+			android:id="@+id/tvLocationLabel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_4dp"
+			android:text="@string/label_locaton"
+			android:textAppearance="?attr/captionLargeRegular"
+			android:textColor="?attr/black_font"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/tvAreaUsedLabel"
+			app:layout_constraintTop_toTopOf="@id/tvFarmAreaLabel" />
+
+		<TextView
+			android:id="@+id/tvFarmArea"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_4dp"
+			android:textAppearance="?attr/captionLargeSemiBold"
+			android:textColor="?attr/info_normal"
+			app:layout_constraintEnd_toEndOf="@id/tvFarmAreaLabel"
+			app:layout_constraintStart_toStartOf="@id/tvFarmAreaLabel"
+			app:layout_constraintTop_toBottomOf="@id/tvFarmAreaLabel"
+			tools:text="200Ha" />
+
+		<TextView
+			android:id="@+id/tvAreaUsed"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_4dp"
+			android:textAppearance="?attr/captionLargeSemiBold"
+			android:textColor="?attr/info_normal"
+			app:layout_constraintEnd_toEndOf="@id/tvAreaUsedLabel"
+			app:layout_constraintStart_toStartOf="@id/tvAreaUsedLabel"
+			app:layout_constraintTop_toBottomOf="@id/tvAreaUsedLabel"
+			tools:text="150Ha" />
+
+		<TextView
+			android:id="@+id/tvLocation"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:maxLines="2"
+			android:layout_marginTop="@dimen/dimen_4dp"
+			android:textAppearance="?attr/captionLargeSemiBold"
+			android:textColor="?attr/info_normal"
+			app:layout_constraintEnd_toEndOf="@id/tvLocationLabel"
+			app:layout_constraintStart_toStartOf="@id/tvLocationLabel"
+			app:layout_constraintTop_toBottomOf="@id/tvLocationLabel"
+			tools:text="Sukabumi" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<include
+			android:id="@+id/layout_rejected_reason"
+			layout="@layout/layout_rejected_reason"
+			android:layout_width="@dimen/dimen_0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:visibility="gone"
+			app:layout_constraintEnd_toEndOf="@id/tvAreaName"
+			app:layout_constraintStart_toStartOf="@id/tvAreaName"
+			app:layout_constraintTop_toBottomOf="@+id/clAreaDetail"
+			tools:visibility="visible" />
+
+		<com.telkom.legion.component.dividers.LgnDivider
+			android:id="@+id/viewDivider"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/layout_rejected_reason" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/rvFinalStatus"
+			android:layout_width="@dimen/dimen_0dp"
+			android:layout_height="wrap_content"
+			android:overScrollMode="never"
+			app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/viewDivider"
+			tools:itemCount="2"
+			tools:listitem="@layout/item_final_assessment" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

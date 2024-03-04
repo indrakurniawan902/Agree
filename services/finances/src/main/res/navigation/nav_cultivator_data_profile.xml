@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_cultivator_data_profile"
+    app:startDestination="@id/listCultivatorFragment">
+
+    <fragment
+        android:id="@+id/listCultivatorFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.cultivator.data.listcultivator.ListCultivatorFragment"
+        android:label="fragment_list_cultivator"
+        tools:layout="@layout/fragment_list_cultivator">
+        <action
+            android:id="@+id/action_listCultivatorFragment_to_profileCultivatorFragment"
+            app:destination="@id/profileCultivatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileCultivatorFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.cultivator.data.profilefarmer.ProfileCultivatorFragment"
+        android:label="fragment_profile_cultivator"
+        tools:layout="@layout/fragment_profile_cultivator">
+        <argument
+            android:name="params"
+            app:argType="com.agree.ecosystem.finances.domain.reqres.model.params.ProfileCultivatorParams" />
+        <action
+            android:id="@+id/action_profileCultivatorFragment_to_dynamicformInfoCultivatorFragment"
+            app:destination="@id/dynamicformInfoCultivatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dynamicformInfoCultivatorFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.cultivator.data.profilefarmer.dynamic.DynamicformInfoCultivatorFragment"
+        android:label="fragment_dynamicform_info_cultivator"
+        tools:layout="@layout/fragment_dynamicform_info_cultivator">
+        <argument
+            android:name="params"
+            app:argType="com.agree.ecosystem.finances.domain.reqres.model.params.DynamicFormProfileCultivatorParams" />
+    </fragment>
+</navigation>

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Running git pre-commit"
+
+./gradlew ktlint
+
+RESULT=$?
+
+if [ "$RESULT" = 0 ] ; then
+    echo "***********************************************"
+    echo "               Ktlint Success                "
+    echo "***********************************************"
+    exit 0
+else
+    echo "***********************************************"
+    echo "               Ktlint failed                 "
+    echo " Please fix the above issues before committing "
+    echo "***********************************************"
+    exit 1
+fi

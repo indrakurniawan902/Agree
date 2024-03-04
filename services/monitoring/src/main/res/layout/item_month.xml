@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen_76dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dimen_6dp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="?attr/info_hover"
+    app:strokeWidth="@dimen/dimen_1dp">
+
+    <TextView
+        android:id="@+id/tvMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="?attr/spacing3"
+        android:paddingVertical="?attr/spacing1"
+        android:textAppearance="?attr/bodySmallSemiBold"
+        android:textColor="?attr/info_hover"
+        tools:text="Januari"/>
+</com.google.android.material.card.MaterialCardView>
+
+

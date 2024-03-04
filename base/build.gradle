@@ -1,0 +1,164 @@
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "com.google.gms.google-services"
+    id "com.google.firebase.crashlytics"
+    id "androidx.navigation.safeargs.kotlin"
+    id 'com.google.firebase.appdistribution'
+}
+
+apply from: "../ktlint.gradle"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-parcelize"
+
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.agree.ecosystem"
+        minSdk 22
+        targetSdk 33
+        multiDexEnabled true
+        versionCode appVersionCode
+        versionName appVersion
+        setProperty("archivesBaseName", "Ecosystem-v$versionName")
+
+        Properties properties = new Properties()
+        File localPropertiesFile = project.rootProject.file("local.properties")
+
+        if(localPropertiesFile.exists()) {
+            properties.load(localPropertiesFile.newDataInputStream())
+
+            if(properties.getProperty("UIKIT_TEST") != null && !properties.getProperty("UIKIT_TEST").isEmpty()) {
+                buildConfigField("boolean", "UIKIT_TEST", properties.getProperty("UIKIT_TEST"))
+            } else {
+                buildConfigField("boolean", "UIKIT_TEST", "false")
+            }
+        } else {
+            buildConfigField("boolean", "UIKIT_TEST", "false")
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    signingConfigs {
+        release {
+            if(keystorePropertiesFile.exists()) {
+                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+                storeFile rootProject.file(keystoreProperties["KEYSTORE_FILE"])
+                storePassword keystoreProperties["STORE_PASSWORD"]
+                keyAlias keystoreProperties["KEY_ALIAS"]
+                keyPassword keystoreProperties["KEY_PASSWORD"]
+            }
+        }
+    }
+
+    firebaseAppDistribution {
+//        releaseNotesFile = "New Release"
+        groups = "agree-superapp"
+//        artifactPath = "app/build/outputs/apk_from_bundle/...apk"
+    }
+
+    flavorDimensions "enviroment"
+    productFlavors {
+        prod {
+            dimension "enviroment"
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            firebaseAppDistribution {
+                artifactType = "AAB"
+                serviceCredentialsFile = "firebase/prod/agree-ecosystem-prod.json"
+            }
+        }
+        staging {
+            dimension "enviroment"
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            firebaseAppDistribution {
+                artifactType = "APK"
+                serviceCredentialsFile = "firebase/staging/agree-ecosystem-staging.json"
+            }
+        }
+        dev {
+            dimension "enviroment"
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            firebaseAppDistribution {
+                artifactType = "APK"
+                serviceCredentialsFile = "firebase/dev/agree-ecosystem-dev.json"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            resValue "string", "app_name", "SuperAgree"
+            buildConfigField("String", "VARIANT", "\"release\"")
+            debuggable = false
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            testCoverageEnabled false
+            signingConfig signingConfigs.release
+            firebaseCrashlytics {
+                mappingFileUploadEnabled true
+            }
+        }
+        debug {
+            resValue "string", "app_name", "SuperAgree-Debug"
+            buildConfigField("String", "VARIANT", "\"development\"")
+            versionNameSuffix "-dev"
+            minifyEnabled false
+            debuggable true
+            testCoverageEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
+        }
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    lint {
+        abortOnError = false
+    }
+
+    dynamicFeatures = [":apps:calc", ":apps:prices", ":apps:weather"]
+    namespace "com.agree.ecosystem"
+    androidResources {
+        additionalParameters "--no-version-vectors"
+    }
+}
+
+dependencies {
+    implementation project(":core").subprojects
+    implementation project(":services").subprojects
+
+    implementation libs.bundles.android.playcore
+    implementation 'androidx.test:monitor:1.5.0'
+    implementation 'androidx.test.ext:junit-ktx:1.1.5'
+
+    //Pluto Debugger
+    debugImplementation libs.bundles.pluto
+    releaseImplementation libs.bundles.pluto.noop
+}
+
+check.dependsOn ktlint

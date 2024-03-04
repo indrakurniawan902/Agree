@@ -1,0 +1,13 @@
+apply from: '../../ktlint.gradle'
+
+android {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    // Module Scope Dependencies
+}
+
+check.dependsOn ktlint

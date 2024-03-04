@@ -1,0 +1,26 @@
+apply from: '../../ktlint.gradle'
+
+android {
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    ndkVersion '25.1.8937393'
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+    }
+    namespace 'com.agree.ecosystem.core.utils'
+}
+
+dependencies {
+    // Module Scope Dependencies
+    testImplementation 'junit:junit:4.13.2'
+    debugImplementation "com.github.chuckerteam.chucker:library:${libs.versions.chucker.get()}"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:${libs.versions.chucker.get()}"
+
+    implementation libs.bundles.retrofit.utility
+}
+
+check.dependsOn ktlint

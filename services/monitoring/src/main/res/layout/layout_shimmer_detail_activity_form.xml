@@ -1,0 +1,156 @@
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_4dp"
+            app:cardCornerRadius="@dimen/dimen_6dp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_12dp">
+
+                <View
+                    android:id="@+id/shimmerActivityName"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_21dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <View
+                    android:id="@+id/shimmerPhaseName"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginHorizontal="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shimmerActivityName"
+                    app:layout_constraintWidth_percent="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_4dp"
+            app:cardCornerRadius="@dimen/dimen_6dp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_12dp">
+
+                <View
+                    android:id="@+id/shimmerActivityName2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_21dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <View
+                    android:id="@+id/shimmerPhaseName2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginHorizontal="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shimmerActivityName2"
+                    app:layout_constraintWidth_percent="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_4dp"
+            app:cardCornerRadius="@dimen/dimen_6dp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_12dp">
+
+                <View
+                    android:id="@+id/shimmerActivityName3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_21dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <View
+                    android:id="@+id/shimmerPhaseName3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_106dp"
+                    android:layout_marginHorizontal="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shimmerActivityName3"
+                    app:layout_constraintWidth_percent="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_4dp"
+            app:cardCornerRadius="@dimen/dimen_6dp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_12dp">
+
+                <View
+                    android:id="@+id/shimmerButton"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_48dp"
+                    android:layout_marginHorizontal="@dimen/dimen_12dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

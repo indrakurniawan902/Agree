@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginVertical="@dimen/dimen_8dp"
+		android:orientation="vertical">
+
+		<com.google.android.material.card.MaterialCardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginVertical="@dimen/dimen_8dp"
+			app:cardCornerRadius="@dimen/dimen_6dp"
+			app:cardElevation="0dp"
+			app:strokeColor="?attr/black_600"
+			app:strokeWidth="@dimen/dimen_1dp">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/dimen_12dp">
+
+				<View
+					android:id="@+id/shimmerSubVesselName"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_16dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintBottom_toBottomOf="@id/shimmerStatus"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="@id/shimmerStatus"
+					app:layout_constraintWidth_percent="0.4" />
+
+				<View
+					android:id="@+id/shimmerStatus"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_22dp"
+					android:layout_marginEnd="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@id/ivNext"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintWidth_percent="0.25" />
+
+				<ImageView
+					android:id="@+id/ivNext"
+					android:layout_width="@dimen/dimen_24dp"
+					android:layout_height="@dimen/dimen_24dp"
+					android:contentDescription="@null"
+					android:src="@drawable/ic_chevron_right"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:tint="?attr/black_800" />
+
+				<View
+					android:id="@+id/shimmerLabelSubVesselId"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_16dp"
+					android:layout_marginEnd="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/shimmerLabelLocation"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintHorizontal_chainStyle="spread_inside"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/shimmerStatus" />
+
+				<View
+					android:id="@+id/shimmerLabelLocation"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginHorizontal="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/shimmerLabelCommodities"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@+id/shimmerLabelSubVesselId"
+					app:layout_constraintTop_toTopOf="@+id/shimmerLabelSubVesselId" />
+
+				<View
+					android:id="@+id/shimmerLabelCommodities"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginHorizontal="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/ivNext"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@+id/shimmerLabelLocation"
+					app:layout_constraintTop_toTopOf="@+id/shimmerLabelSubVesselId" />
+
+				<View
+					android:id="@+id/shimmerSubVesselId"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelSubVesselId"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelSubVesselId"
+					app:layout_constraintWidth_percent="0.24" />
+
+				<View
+					android:id="@+id/shimmerLocation"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelLocation"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelLocation"
+					app:layout_constraintWidth_percent="0.2" />
+
+				<View
+					android:id="@+id/shimmerCommodities"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelCommodities"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelCommodities"
+					app:layout_constraintWidth_percent="0.23" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+		<com.google.android.material.card.MaterialCardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginVertical="@dimen/dimen_8dp"
+			app:cardCornerRadius="@dimen/dimen_6dp"
+			app:cardElevation="0dp"
+			app:strokeColor="?attr/black_600"
+			app:strokeWidth="@dimen/dimen_1dp">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/dimen_12dp">
+
+				<View
+					android:id="@+id/shimmerSubVesselName2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_16dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintBottom_toBottomOf="@id/shimmerStatus2"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="@id/shimmerStatus2"
+					app:layout_constraintWidth_percent="0.4" />
+
+				<View
+					android:id="@+id/shimmerStatus2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_22dp"
+					android:layout_marginEnd="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@id/ivNext2"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintWidth_percent="0.25" />
+
+				<ImageView
+					android:id="@+id/ivNext2"
+					android:layout_width="@dimen/dimen_24dp"
+					android:layout_height="@dimen/dimen_24dp"
+					android:contentDescription="@null"
+					android:src="@drawable/ic_chevron_right"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:tint="?attr/black_800" />
+
+				<View
+					android:id="@+id/shimmerLabelSubVesselId2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_16dp"
+					android:layout_marginEnd="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/shimmerLabelLocation2"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintHorizontal_chainStyle="spread_inside"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/shimmerStatus2" />
+
+				<View
+					android:id="@+id/shimmerLabelLocation2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginHorizontal="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/shimmerLabelCommodities2"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@+id/shimmerLabelSubVesselId2"
+					app:layout_constraintTop_toTopOf="@+id/shimmerLabelSubVesselId2" />
+
+				<View
+					android:id="@+id/shimmerLabelCommodities2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginHorizontal="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/ivNext2"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@+id/shimmerLabelLocation2"
+					app:layout_constraintTop_toTopOf="@+id/shimmerLabelSubVesselId2" />
+
+				<View
+					android:id="@+id/shimmerSubVesselId2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelSubVesselId2"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelSubVesselId2"
+					app:layout_constraintWidth_percent="0.24" />
+
+				<View
+					android:id="@+id/shimmerLocation2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelLocation2"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelLocation2"
+					app:layout_constraintWidth_percent="0.2" />
+
+				<View
+					android:id="@+id/shimmerCommodities2"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelCommodities2"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelCommodities2"
+					app:layout_constraintWidth_percent="0.23" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+		<com.google.android.material.card.MaterialCardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:layout_marginVertical="@dimen/dimen_8dp"
+			app:cardCornerRadius="@dimen/dimen_6dp"
+			app:cardElevation="0dp"
+			app:strokeColor="?attr/black_600"
+			app:strokeWidth="@dimen/dimen_1dp">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/dimen_12dp">
+
+				<View
+					android:id="@+id/shimmerSubVesselName3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_16dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintBottom_toBottomOf="@id/shimmerStatus3"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="@id/shimmerStatus3"
+					app:layout_constraintWidth_percent="0.4" />
+
+				<View
+					android:id="@+id/shimmerStatus3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_22dp"
+					android:layout_marginEnd="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@id/ivNext3"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintWidth_percent="0.25" />
+
+				<ImageView
+					android:id="@+id/ivNext3"
+					android:layout_width="@dimen/dimen_24dp"
+					android:layout_height="@dimen/dimen_24dp"
+					android:contentDescription="@null"
+					android:src="@drawable/ic_chevron_right"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:tint="?attr/black_800" />
+
+				<View
+					android:id="@+id/shimmerLabelSubVesselId3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_16dp"
+					android:layout_marginEnd="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/shimmerLabelLocation3"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintHorizontal_chainStyle="spread_inside"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/shimmerStatus3" />
+
+				<View
+					android:id="@+id/shimmerLabelLocation3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginHorizontal="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/shimmerLabelCommodities3"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@+id/shimmerLabelSubVesselId3"
+					app:layout_constraintTop_toTopOf="@+id/shimmerLabelSubVesselId3" />
+
+				<View
+					android:id="@+id/shimmerLabelCommodities3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginHorizontal="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintEnd_toStartOf="@+id/ivNext3"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@+id/shimmerLabelLocation3"
+					app:layout_constraintTop_toTopOf="@+id/shimmerLabelSubVesselId3" />
+
+				<View
+					android:id="@+id/shimmerSubVesselId3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelSubVesselId3"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelSubVesselId3"
+					app:layout_constraintWidth_percent="0.24" />
+
+				<View
+					android:id="@+id/shimmerLocation3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelLocation3"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelLocation3"
+					app:layout_constraintWidth_percent="0.2" />
+
+				<View
+					android:id="@+id/shimmerCommodities3"
+					android:layout_width="0dp"
+					android:layout_height="@dimen/dimen_12dp"
+					android:layout_marginTop="@dimen/dimen_12dp"
+					android:background="@drawable/bg_shimmer"
+					app:layout_constraintStart_toStartOf="@id/shimmerLabelCommodities3"
+					app:layout_constraintTop_toBottomOf="@id/shimmerLabelCommodities3"
+					app:layout_constraintWidth_percent="0.23" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+	</LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

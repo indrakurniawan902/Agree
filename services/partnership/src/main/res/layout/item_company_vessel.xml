@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="@dimen/dimen_16dp"
+	app:cardCornerRadius="4dp"
+	app:cardElevation="2dp"
+	app:strokeColor="@color/black_600"
+	app:strokeWidth="@dimen/dimen_1dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="@dimen/dimen_16dp"
+		android:layout_marginVertical="@dimen/dimen_12dp">
+
+		<TextView
+			android:id="@+id/tvIdVessel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:textAppearance="?attr/bodySmallRegular"
+			android:textColor="?attr/black_font"
+			app:layout_constraintEnd_toStartOf="@+id/btnNext"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="ID Area 1234567890" />
+
+		<TextView
+			android:id="@+id/tvNameVessel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?attr/bodySmallBold"
+			android:textColor="?attr/black_font"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			app:layout_constraintEnd_toEndOf="@+id/tvIdVessel"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="@+id/tvIdVessel"
+			app:layout_constraintTop_toBottomOf="@+id/tvIdVessel"
+			tools:text="PT. Agreeculture" />
+
+		<ImageView
+			android:id="@+id/ivEdit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_edit"
+			android:layout_marginHorizontal="@dimen/dimen_8dp"
+			app:layout_constraintBottom_toBottomOf="@+id/tvNameVessel"
+			app:layout_constraintEnd_toEndOf="@+id/tvIdVessel"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toEndOf="@+id/tvNameVessel"
+			app:layout_constraintTop_toTopOf="@+id/tvNameVessel" />
+
+		<ImageView
+			android:id="@+id/ivMapPin"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:src="@drawable/ic_map_pin"
+			app:tint="@color/info_600"
+			app:layout_constraintEnd_toEndOf="@+id/tvNameVessel"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="@+id/tvNameVessel"
+			app:layout_constraintTop_toBottomOf="@+id/tvNameVessel" />
+
+
+		<TextView
+			android:id="@+id/tvLocation"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:textAppearance="?attr/captionLargeRegular"
+			android:textColor="@color/info_600"
+			android:layout_marginHorizontal="@dimen/dimen_8dp"
+			app:layout_constraintBottom_toBottomOf="@+id/ivMapPin"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/ivMapPin"
+			app:layout_constraintTop_toTopOf="@+id/ivMapPin"
+			tools:text="Bandung" />
+
+		<TextView
+			android:id="@+id/tvLabelVesselWide"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/label_vessel_wide_area"
+			android:textAppearance="?attr/bodySmallRegular"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/ivMapPin" />
+
+		<TextView
+			android:id="@+id/tvVesselWide"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?attr/bodySmallSemiBold"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:textColor="?attr/black_font"
+			app:layout_constraintEnd_toEndOf="@+id/tvLabelVesselWide"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="@+id/tvLabelVesselWide"
+			app:layout_constraintTop_toBottomOf="@+id/tvLabelVesselWide"
+			tools:text="100/200ha"/>
+
+		<TextView
+			android:id="@+id/tvLabelTotalVesselWide"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:layout_marginHorizontal="@dimen/dimen_16dp"
+			android:text="@string/label_total_vessel_wide"
+			android:textAppearance="?attr/bodySmallRegular"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toEndOf="@+id/tvLabelVesselWide"
+			app:layout_constraintTop_toBottomOf="@+id/ivMapPin" />
+
+		<TextView
+			android:id="@+id/tvTotalVesselWide"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:textColor="?attr/black_font"
+			android:textAppearance="?attr/bodySmallSemiBold"
+			app:layout_constraintEnd_toEndOf="@+id/tvLabelTotalVesselWide"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="@+id/tvLabelTotalVesselWide"
+			app:layout_constraintTop_toBottomOf="@+id/tvLabelTotalVesselWide"
+			tools:text="100ha"/>
+
+		<ImageButton
+			android:id="@+id/btnNext"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:backgroundTint="@android:color/transparent"
+			android:contentDescription="@null"
+			android:src="@drawable/ic_chevron_right"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:tint="?attr/colorPrimary" />
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

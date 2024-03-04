@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerCheckableLand"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbChooseLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/primary_500"
+        android:textAppearance="?attr/bodySmallRegular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cbChooseLand"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCultivator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_16dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.telkom.legion.component.image.LgnImageView
+                android:id="@+id/imgCultivator"
+                android:layout_width="@dimen/dimen_64dp"
+                android:layout_height="@dimen/dimen_64dp"
+                tools:src="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvLandName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_24dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvCultivator"
+            app:layout_constraintTop_toTopOf="@+id/cvCultivator"
+            tools:text="Lahan samping jembatan" />
+
+        <TextView
+            android:id="@+id/tvLabelSurfaceAre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:text="@string/label_surface_area"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintStart_toStartOf="@+id/tvLandName"
+            app:layout_constraintTop_toBottomOf="@+id/tvLandName" />
+
+        <TextView
+            android:id="@+id/tvValueSurfaceAre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:textAppearance="?attr/captionLargeBold"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintStart_toStartOf="@+id/tvLandName"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelSurfaceAre"
+            tools:text="500 M2" />
+
+        <TextView
+            android:id="@+id/tvLabelPlantSeason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+
+            android:text="@string/label_plant_season"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLandName" />
+
+        <TextView
+            android:id="@+id/tvValuePlantSeason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+
+            android:textAppearance="?attr/captionLargeBold"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelPlantSeason"
+            tools:text="15 Maret 2023" />
+
+        <TextView
+            android:id="@+id/tvValueBudgetPlan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_14dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="?attr/colorTertiary_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvLabelLookAtBudgetPlan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvValueSurfaceAre"
+            tools:text="Total RAB Rp900.000" />
+
+        <TextView
+            android:id="@+id/tvLabelLookAtBudgetPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_look_at_budget_plan"
+            android:textAppearance="?attr/bodySmallSemiBold"
+            android:textColor="?attr/info_700"
+            app:layout_constraintBottom_toBottomOf="@+id/tvValueBudgetPlan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvValueBudgetPlan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.telkom.legion.component.dividers.LgnDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

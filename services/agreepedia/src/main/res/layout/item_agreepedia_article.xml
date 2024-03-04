@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	app:cardCornerRadius="@dimen/dimen_0dp"
+	app:cardElevation="@dimen/dimen_0dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/cardArticle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingHorizontal="@dimen/dimen_16dp"
+		android:paddingVertical="@dimen/dimen_12dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+        <com.telkom.legion.component.image.LgnImageView
+            android:id="@+id/ivImgArticle"
+            android:layout_width="@dimen/dimen_106dp"
+            android:layout_height="@dimen/dimen_72dp"
+            android:radius="@dimen/dimen_8dp"
+            app:cache="AUTOMATIC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+		<TextView
+			android:id="@+id/tvTitleArticle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_8dp"
+			android:layout_marginTop="@dimen/dimen_4dp"
+			android:ellipsize="end"
+			android:maxLines="2"
+			android:textAppearance="?attr/bodySmallSemiBold"
+			android:textColor="?attr/black"
+			app:layout_constraintBottom_toTopOf="@+id/tvAuthorArticle"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/ivImgArticle"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="Pengelolaan air dalam pemanfaatan ladang rawa oleh petani desa Bahagia" />
+
+		<TextView
+			android:id="@+id/tvAuthorArticle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_8dp"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:layout_marginEnd="@dimen/dimen_8dp"
+			android:textAppearance="?attr/captionLargeRegular"
+			android:textColor="?attr/black_600"
+			app:layout_constraintEnd_toStartOf="@+id/tvDateArticle"
+			app:layout_constraintStart_toEndOf="@+id/ivImgArticle"
+			app:layout_constraintTop_toBottomOf="@+id/tvTitleArticle"
+			tools:text="Prof. Retno Marni" />
+
+		<TextView
+			android:id="@+id/tvDateArticle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_8dp"
+			android:textAppearance="?attr/captionLargeRegular"
+			android:textColor="?attr/black_600"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/tvTitleArticle"
+			tools:text="24/07/2022" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,170 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation, MissingTranslation" >
+    <!--    <string name="app_name">Agree Ecosystem</string>-->
+    <string name="pluto___notch_label" translatable="false">Debug.</string>
+    <string name="pluto___choose_plugin" translatable="false">Pilih Debug Tool</string>
+    <string name="title_poultry" translatable="false">Poultry</string>
+    <string name="title_ruminants" translatable="false">Ruminants</string>
+    <string name="title_cultivator" translatable="false">Cultivator</string>
+    <string name="title_fisherman" translatable="false">Fisherman</string>
+    <string name="title_horticulture" translatable="false">Horticulture</string>
+    <string name="title_hydroponics" translatable="false">Hydroponics</string>
+    <string name="label_poultry">Unggas</string>
+    <string name="label_ruminants">Hewan Besar</string>
+    <string name="label_cultivator">Budidaya</string>
+    <string name="label_fisherman">Nelayan</string>
+    <string name="label_horticulture">Tanam</string>
+    <string name="label_hydroponics">Hidroponik</string>
+    <string name="label_agriculture">Pertanian</string>
+    <string name="label_fishery">Perikanan</string>
+    <string name="label_livestock">Peternakan</string>
+    <string name="menu_home">Beranda</string>
+    <string name="menu_partnership">Kemitraan</string>
+    <string name="menu_monitoring">Monitoring</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="label_register">Daftar</string>
+
+    <string name="label_phonenumber">No Handphone</string>
+    <string name="label_email">Email</string>
+    <string name="label_tnc_checkbox_1">Saya setuju dengan</string>
+    <string name="error_rule_phone">No. Handphone harus terdiri dari 10–14 digit angka, diawali dengan 08 atau 628</string>
+    <string name="error_user_agreement">Anda belum menyetujui syarat dan ketentuan</string>
+    <string name="action_call_cs">Hubungi CS Kami</string>
+    <string name="label_code_not_empty">Kode OTP tidak boleh kosong</string>
+
+    <string name="error_rule_email">Format email salah</string>
+    <string name="error_empty_field">%s tidak boleh kosong!</string>
+    <string name="error_empty_field_must_filled">%s harus diisi</string>
+    <string name="error_username_rule">Username terdiri dari 5–13 karakter berupa huruf atau angka</string>
+    <string name="label_cs_dialog">Kamu akan menghubungi Whatsapp Customer Service</string>
+    <string name="label_logout_dialog">Yakin ingin keluar dari akun?</string>
+    <string name="action_yes">Ya</string>
+    <string name="action_cancel">Batal</string>
+    <string name="label_change_password_dialog">Yakin ingin menyimpan perubahan kata sandi kamu?</string>
+
+
+    <string name="label_nik">NIK</string>
+    <string name="label_phone_number">No. Handphone</string>
+
+    <string name="label_province">Provinsi</string>
+    <string name="placeholder_province">Pilih Provinsi anda</string>
+    <string name="label_district">Kabupaten/Kota</string>
+    <string name="placeholder_district">Pilih Kabupaten/Kota anda</string>
+    <string name="label_sub_district">Kecamatan</string>
+    <string name="placeholder_sub_district">Pilih Kecamatan anda</string>
+    <string name="label_village">Desa/Kelurahan</string>
+    <string name="placeholder_village">Pilih Desa/Kelurahan anda</string>
+    <string name="label_document_photos">Foto Kelengkapan Dokumen</string>
+
+    <string name="label_family_card">Kartu Keluarga</string>
+    <string name="label_id_card">KTP</string>
+
+    <string name="error_rule_password_8chars">"Kata sandi minimal 8 karakter"</string>
+
+    <string name="error_empty_name_rule">Nama lengkap tidak boleh kosong</string>
+    <string name="error_alpha_only_name_rule">Nama lengkap tidak boleh terdapat angka</string>
+    <string name="error_empty_username_rule">Username atau No.HP tidak boleh kosong</string>
+    <string name="error_empty_email_rule">Email tidak boleh kosong</string>
+    <string name="error_email_rule">Format email salah</string>
+    <string name="error_empty_rule_phone">No. HP tidak boleh kosong</string>
+    <string name="error_username_registered">Username sudah terdaftar</string>
+    <string name="error_email_registered">Email sudah terdaftar</string>
+    <string name="error_phone_registered">No Handphone sudah terdaftar</string>
+    <string name="error_password_empty">Kata sandi tidak boleh kosong</string>
+    <string name="error_password_confirmation_empty">Konfirmasi kata sandi tidak boleh kosong</string>
+    <string name="error_same_value">Konfirmasi kata sandi tidak sesuai</string>
+    <string name="error_regex_rule">Kata sandi minimal 8 karakter</string>
+    <string name="label_changed_password">Perubahan Kata Sandi</string>
+    <string name="label_changed_password_message">Agar akun anda tetap aman, silahkan lakukan perubahan kata sandi</string>
+    <string name="label_user_check">Username</string>
+    <string name="label_email_check">Email</string>
+    <string name="error_email_not_found">Email yang anda masukkan tidak terdaftar</string>
+
+    <string name="label_phone">Phone</string>
+    <string name="label_phone_check">Phone</string>
+
+    <string name="error_phone_not_registered">No. Handphone yang anda masukkan tidak terdaftar</string>
+    <string name="label_error_otp">Kode OTP yang kamu masukkan tidak sesuai</string>
+
+    <string name="label_partnership_and_monitoring"><![CDATA[Kemitraan & Monitoring]]></string>
+    <string name="label_convenience_in_one_hand">Kemudahan dalam Satu Genggaman</string>
+
+    <string name="label_banner_title_join_partnership">Makin Untung,\nGabung Kemitraan!</string>
+    <string name="label_title_empty_article">Tidak Ada Artikel</string>
+    <string name="label_desc_empty_article">Untuk melihat artikel kunjungi website Agrepedia.</string>
+    <string name="label_account_not_verified">Akun Belum Terverifikasi!</string>
+    <string name="label_company_list">Daftar Perusahaan</string>
+
+
+    <string name="label_register_partnership_company">Daftar Mitra Perusahaan</string>
+    <string name="label_nik_full">Nomor Induk Kependudukan ( NIK )</string>
+    <string name="input_nik">Masukkan NIK KTP</string>
+    <string name="partnership_type">Jenis Kemitraan</string>
+    <string name="label_cultivation_price_contract">Budidaya - Kontrak Harga</string>
+    <string name="label_cultivation_makloon">Budidaya - Makloon</string>
+    <string name="label_cultivation_rent_shed">Budidaya - Sewa Kandang</string>
+    <string name="label_farm_wide_area">Luas Area Peternakan</string>
+    <string name="input_wide_area">Masukkan Luas Area</string>
+    <string name="label_choose_unit">Pilih Satuan</string>
+    <string name="item_ha">Ha (hektar)</string>
+    <string name="item_m2">M2 (meter persegi)</string>
+    <string name="label_address_farm_area">Alamat Area Peternakan</string>
+    <string name="label_add_address">Tambah Alamat</string>
+    <string name="label_commodity">Komoditas</string>
+    <string name="error_nik_not_valid">NIK harus terdiri dari 16 digit angka</string>
+    <string name="title_calc">Calc</string>
+    <string name="title_finance">Finance</string>
+    <string name="title_iot">Iot</string>
+    <string name="title_prices">Prices</string>
+    <string name="title_weather">Weather</string>
+    <string name="menu_infrastructure">Sarana Prasarana</string>
+    <string name="error_email_not_registered">Email yang anda masukkan tidak terdaftar</string>
+    <string name="title_facilities_and_infrastructure">Sarana dan Prasarana</string>
+
+    <string name="label_profile_account">Profil Akun</string>
+    <string name="label_infrastructure">Sarana dan Prasarana</string>
+    <string name="label_activity_monitoring">Aktivitas dan Monitoring</string>
+    <string name="label_capital">Permodalan</string>
+
+    <string name="title_activities_and_monitoring">Aktivitas dan Monitoring</string>
+    <string name="label_facilities_and_infrastructure">Sarana &amp; Prasarana</string>
+    <string name="label_activities_and_monitoring">Aktivitas dan Monitoring</string>
+    <string name="label_succes_change_password">Berhasil merubah kata sandi</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_list_vessel">List Area</string>
+    <string name="label_list_subvessel">List Sub Area</string>
+    <string name="label_location_area">%s, %sHa</string>
+
+    <string name="label_size">(%sHa)</string>
+    <string name="label_active">Aktif</string>
+    <string name="label_inactive">Tidak Aktif</string>
+    <string name="label_description_empty_list_sub_vessel">Silahkan daftar kemitraan terlebih dahulu untuk dapat melakukan aktivitas monitoring</string>
+    <string name="label_title_empty_list_sub_vessel">Belum Ada Sub Area Terdaftar</string>
+    <string name="label_title_empty_list_vessel">Belum Ada Area Terdaftar</string>
+    <string name="label_description_empty_list_vessel">Silahkan daftar kemitraan terlebih dahulu untuk dapat melakukan aktivtas monitoring</string>
+
+    <!-- Notification Resources -->
+    <string name="label_empty_list_notification">Belum Ada Notifikasi</string>
+    <string name="label_description_empty_list_notification">Belum ada pesan baru yang tersedia saat ini</string>
+    <string name="label_state">Status</string>
+    <string name="sample_registration_success">Pendaftaran Berhasil</string>
+    <string name="sample_main_detail_notification">Kemitraan berhasil didaftarkan, silakan menunggu hasil review dari perusahaan.</string>
+    <string name="label_thank_you">Terima Kasih</string>
+    <string name="label_need_help">Butuh Bantuan?</string>
+    <string name="label_visit_cs_agree">Kunjungi pusat bantuan agree\nyuk!</string>
+    <string name="label_pertanian_state">Pertanian:</string>
+    <string name="label_field_assistant_with_data">Field Assistant: %s</string>
+
+    <string name="label_size_area">%sHa</string>
+
+    <string name="error_load_subsector">Gagal memuat Sub Sector</string>
+    <string name="label_try_again">Coba Lagi</string>
+
+
+
+    <string name="label_status_review">Status Review:</string>
+    <string name="label_register_rejected">Pendaftaran Ditolak</string>
+    <string name="label_or">Atau</string>
+    <string name="label_no_partnered_commodities_yet">Belum ada komoditas yang dimitrakan</string>
+
+</resources>

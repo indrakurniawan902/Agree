@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dimen_16dp">
+
+            <View
+                android:id="@+id/viewVessel1"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="@dimen/dimen_12dp"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewVessel2"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="@dimen/dimen_12dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintEnd_toEndOf="@+id/viewVessel1"
+                app:layout_constraintStart_toStartOf="@+id/viewVessel1"
+                app:layout_constraintTop_toBottomOf="@+id/viewVessel1" />
+
+            <TextView
+                android:id="@+id/tvSeeDetail"
+                android:layout_width="@dimen/dimen_80dp"
+                android:layout_height="@dimen/dimen_12dp"
+                android:layout_gravity="end"
+                android:layout_marginVertical="@dimen/dimen_16dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintBottom_toBottomOf="@+id/viewVessel2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewVessel1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/viewVessel3"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewVessel4"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/viewVessel3"
+                    app:layout_constraintStart_toStartOf="@+id/viewVessel3"
+                    app:layout_constraintTop_toBottomOf="@+id/viewVessel3" />
+
+                <TextView
+                    android:id="@+id/tvSeeDetail2"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_gravity="end"
+                    android:layout_marginVertical="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewVessel4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewVessel3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/viewVessel5"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewVessel6"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/viewVessel5"
+                    app:layout_constraintStart_toStartOf="@+id/viewVessel5"
+                    app:layout_constraintTop_toBottomOf="@+id/viewVessel5" />
+
+                <TextView
+                    android:id="@+id/tvSeeDetail3"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_gravity="end"
+                    android:layout_marginVertical="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewVessel6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewVessel5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/viewVessel7"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewVessel8"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/viewVessel7"
+                    app:layout_constraintStart_toStartOf="@+id/viewVessel7"
+                    app:layout_constraintTop_toBottomOf="@+id/viewVessel7" />
+
+                <TextView
+                    android:id="@+id/tvSeeDetail4"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_gravity="end"
+                    android:layout_marginVertical="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewVessel8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewVessel7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/viewVessel9"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewVessel10"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/viewVessel9"
+                    app:layout_constraintStart_toStartOf="@+id/viewVessel9"
+                    app:layout_constraintTop_toBottomOf="@+id/viewVessel9" />
+
+                <TextView
+                    android:id="@+id/tvSeeDetail5"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_gravity="end"
+                    android:layout_marginVertical="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewVessel10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewVessel9" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/viewVessel11"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewVessel12"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/viewVessel11"
+                    app:layout_constraintStart_toStartOf="@+id/viewVessel11"
+                    app:layout_constraintTop_toBottomOf="@+id/viewVessel11" />
+
+                <TextView
+                    android:id="@+id/tvSeeDetail6"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_gravity="end"
+                    android:layout_marginVertical="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewVessel12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewVessel11" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/viewVessel13"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewVessel14"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/viewVessel13"
+                    app:layout_constraintStart_toStartOf="@+id/viewVessel13"
+                    app:layout_constraintTop_toBottomOf="@+id/viewVessel13" />
+
+                <TextView
+                    android:id="@+id/tvSeeDetail7"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_gravity="end"
+                    android:layout_marginVertical="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewVessel14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewVessel13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_4dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?attr/black_600"
+            app:strokeWidth="@dimen/dimen_1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_16dp">
+
+                <View
+                    android:id="@+id/viewVessel15"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSeeDetail8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewVessel16"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/viewVessel15"
+                    app:layout_constraintStart_toStartOf="@+id/viewVessel15"
+                    app:layout_constraintTop_toBottomOf="@+id/viewVessel15" />
+
+                <TextView
+                    android:id="@+id/tvSeeDetail8"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_gravity="end"
+                    android:layout_marginVertical="@dimen/dimen_16dp"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewVessel16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewVessel15" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_register_partnership"
+    app:startDestination="@id/companiesFragment">
+
+    <fragment
+        android:id="@+id/companiesFragment"
+        android:name="com.agree.ecosystem.partnership.presentation.menu.companies.CompaniesFragment"
+        android:label="fragment_companies"
+        tools:layout="@layout/fragment_companies">
+        <argument
+            android:name="selectedSector"
+            app:argType="com.agree.ecosystem.utilities.domain.reqres.model.subsector.SubSector[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_companiesFragment_to_detailCompanyFragment"
+            app:destination="@id/detailCompanyFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailCompanyFragment"
+        android:name="com.agree.ecosystem.partnership.presentation.menu.companies.detail.DetailCompanyFragment"
+        android:label="DetailCompanyFragment"
+        tools:layout="@layout/fragment_detail_company">
+        <argument
+            android:name="companyId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_detailCompanyFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.agree.ecosystem.partnership.presentation.menu.registration.RegistrationFragment"
+        android:label="RegistrationFragment"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment"
+            app:enterAnim="@anim/anim_slide_in_top"
+            app:exitAnim="@anim/anim_slide_out_bottom"
+            app:popEnterAnim="@anim/anim_slide_in_top"
+            app:popExitAnim="@anim/anim_slide_out_bottom"/>
+        <argument
+            android:name="data"
+            app:argType="com.agree.ecosystem.partnership.domain.reqres.model.company.Company" />
+        <argument
+            android:name="dataCommodity"
+            app:argType="com.agree.ecosystem.utilities.domain.reqres.model.commodity.Commodity[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.agree.ecosystem.partnership.presentation.menu.addaddress.AddAddressFragment"
+        android:label="AddAddressFragment"
+        tools:layout="@layout/fragment_add_address" />
+</navigation>

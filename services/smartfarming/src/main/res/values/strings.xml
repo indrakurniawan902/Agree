@@ -1,0 +1,37 @@
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_info_fishery">Informasi Kolam</string>
+    <string name="title_info_livestock">Informasi Kandang</string>
+    <string name="title_info_agriculture">Informasi Lahan</string>
+    <string name="title_sub_vessel_name_fishery">Nama Kolam</string>
+    <string name="title_sub_vessel_name_livestock">Nama Kandang</string>
+    <string name="title_sub_vessel_name_agriculture">Nama Lahan</string>
+    <string name="title_cultivator_name_fishery">Petambak</string>
+    <string name="title_cultivator_name_livestock">Peternak</string>
+    <string name="title_cultivator_name_agriculture">Petani</string>
+    <string name="label_smartfarming_monitoring">Monitoring</string>
+    <string name="label_smartfarming_actuator">Aktuator</string>
+    <string name="test_parameters">Parameter Uji</string>
+    <string name="icon_of_test_parameter">Icon of Test Parameter</string>
+    <string name="temperature_title">Suhu Air</string>
+    <string name="title_change_tool"> Ganti Alat</string>
+    <string name="title_apply">Terapkan</string>
+    <string name="label_select_date">Pilih Tanggal</string>
+    <string name="action_select">Pilih</string>
+    <string name="action_cancel">Batal</string>
+    <string name="data_not_available_title">Belum Ada Data Tersedia</string>
+    <string name="data_not_available_desc">Belum ada data yang tersedia pada perangkat ini.</string>
+    <string name="title_bad">Buruk</string>
+    <string name="title_danger">Waspada</string>
+    <string name="title_good">Bagus</string>
+    <string name="title_recommendation">Rekomendasi</string>
+    <string name="title_flush_now">Siram Sekarang</string>
+    <string name="desc_recommendation">Suhu air sedang dalam keadaan buruk, silakan lakukan penambahan volume air supaya kondisi air kembali dalam keadaan bagus</string>
+    <string name="label_title_error_devices">Gagal memuat data</string>
+    <string name="label_desc_error_devices">Data perangkat gagal dimuat, silahkan coba lagi!</string>
+    <string name="label_title_alert_notification">Perhatian</string>
+    <string name="good">Bagus</string>
+    <string name="wary">Waspada</string>
+    <string name="bad">Buruk</string>
+    <string name="parameter">Parameter</string>
+</resources>

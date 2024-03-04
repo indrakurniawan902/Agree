@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="@dimen/dimen_48dp"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/ic_sad"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/tvTitleEmptyActivitySop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_title_empty_activity_cultivation_sop"
+        android:gravity="center"
+        android:layout_marginTop="?attr/spacing4"
+        android:layout_marginHorizontal="?attr/spacing4"
+        android:textAppearance="?attr/bodySmallBold"/>
+    <TextView
+        android:id="@+id/tvDescEmptyActivitySop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_description_empty_activity_cultivation_sop"
+        android:gravity="center"
+        android:textColor="@color/black_font"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginHorizontal="?attr/spacing4"
+        android:textAppearance="?attr/captionLargeRegular"/>
+
+    <com.telkom.legion.component.button.ghost.LgnPrimaryGhostSlimButton
+        android:id="@+id/btnAddActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?attr/spacing4"
+        android:text="@string/action_add_activity" />
+</LinearLayout>

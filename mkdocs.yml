@@ -1,0 +1,152 @@
+site_name: Agree Ecosystem
+site_url: https://agree-ecosystem-dev.web.app/
+site_description: Agree is a collaboration platform between actors, buyers, financiers and entities that support agriculture, fisheries, and livestock ecosystems.
+docs_dir: docs/src
+
+# Theme
+theme:
+  name: material
+  custom_dir: docs/theme
+  logo: assets/ic_leaf.svg
+  favicon: assets/ic_leaf.svg
+  languange: en
+  font:
+    text: Open Sans
+    code: Fira Code
+  icon:
+    repo: fontawesome/brands/gitlab
+  palette: 
+    scheme: dracula
+    primary: razer
+    accent: razer
+  features:
+    # - navigation.instant
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.annotate
+
+extra_css:
+  - stylesheets/hint.min.css
+  - stylesheets/extra-9f2612b5f7.css
+
+# extra_javascript:
+#   - js/jquery.min.js
+
+plugins:
+  - search
+  - tooltips
+  - awesome-pages
+  - macros
+  - mermaid2
+  # - encryptcontent:
+  #       global_password: 'agree2021'
+  #       title_prefix: ''
+  #       summary: 'This content is protected with encryption.'
+  #       placeholder: 'Input password and press ENTER'
+  #       remember_password: True
+  #       default_expire_dalay: 24
+  - minify:
+      minify_html: true
+      minify_js: true
+
+# Repository
+repo_url: https://gitlab.playcourt.id/agree-logtan/mobile-services/agree-logtan-mobile-ecosystem
+repo_name: View on Gitlab!
+copyright: Copyright &copy; 2023 Agree And Telkom DEV
+
+# Navigation
+nav:
+  - Home: index.md
+  - Fundamentals:
+    - Basic Knowladge: fundamentals/basic-knowladge.md
+    - Architecture: 
+      - Introduction: fundamentals/architecture.md
+      - Modules: fundamentals/modules.md
+      - Libraries and technologies: fundamentals/technologies.md
+      - Project Structure: fundamentals/project-structure.md
+    - Gitflow:
+      - Developer Area:
+        - Developer Gitflow: fundamentals/gitflow/dev/gitflow.md
+        - Branch and Commit: fundamentals/gitflow/dev/branch-commit.md
+        - Usecase: fundamentals/gitflow/dev/usecase.md
+    - Convention:
+      - XML ID Convention: fundamentals/convention/xml-convention.md
+      - Resource Convention: fundamentals/convention/resource-convention.md
+      - Code Convention: fundamentals/convention/code-convention.md
+  - Guideline:
+    - Form Validation: guideline/form-validation.md
+    - Snack Bar: guideline/snack-bar.md
+  - Design System: "https://legion.telkom.design"
+    # - Foundation:
+    #   - Color System: uikit/fundamentals/color-system.md
+    #   - Typography: uikit/fundamentals/typography.md
+    #   - Spacing & Radius: uikit/fundamentals/spacing-and-radius.md
+    #   - Shadow: uikit/fundamentals/shadow.md
+    # - Implementation:
+    #   - Gradle Configuration: uikit/implementation/gradle-configuration.md
+    #   - Theme Configuration: 
+    #     - Basic Configuration : uikit/implementation/theme-configuration.md
+    #     - Color Configuration : uikit/implementation/color-configuration.md
+    #     - Typography Configuration: uikit/implementation/typography-configuration.md
+    # - Component:
+      # - Button:
+      #   - Fill:
+      #     - PrimaryFitButton: uikit/component/button/fill/primary-fit-button.md
+      #     - PrimaryLargeButton: uikit/component/button/fill/primary-large-button.md
+      #     - PrimarySlimButton: uikit/component/button/fill/primary-slim-button.md
+      #     - PrimarySmallButton: uikit/component/button/fill/primary-small-button.md
+      #   - Outline:
+      #     - PrimaryOutlineFitButton: uikit/component/button/outline/primary-outline-fit-button.md
+      #     - PrimaryOutlineLargeButton: uikit/component/button/outline/primary-outline-large-button.md
+      #     - PrimaryOutlineSlimButton: uikit/component/button/outline/primary-outline-slim-button.md
+      #     - PrimaryOutlineSmallButton: uikit/component/button/outline/primary-outline-small-button.md
+      # - Radio Button:
+      #   - RadioButton: uikit/component/radio/radio-button.md
+      #   - RadioGroup: uikit/component/radio/radio-group.md
+      # - Text Field:
+      #   - SingleField: uikit/component/textfield/single-textfield.md
+      #   - PasswordField: uikit/component/textfield/password-textfield.md
+      #   - TextAreaField: uikit/component/textfield/textarea-field.md
+      #   - CalendarField: uikit/component/textfield/calendar-textfield.md
+      #   - TimeField: uikit/component/textfield/time-textfield.md
+      #   - DropdownField: uikit/component/textfield/dropdown-textfield.md
+      #   - SingleUnitField: uikit/component/textfield/single-unit-textfield.md
+      # - Images:
+      #   - Multiple Image Field: uikit/component/images/multipleimage-field.md
+      # - Toolbar:
+      #   - Toolbar White: uikit/component/toolbar/toolbar-white.md
+
+# Extension
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - def_list
+  - pymdownx.snippets
+  - pymdownx.critic
+  - pymdownx.smartsymbols
+  - attr_list
+  - admonition
+  - meta
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      toc_depth: 3
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify

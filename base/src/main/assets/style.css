@@ -1,0 +1,9 @@
+p{font-family:"Open Sans";}
+/*body{font-family:'Open Sans', sans-serif;}*/
+figure{max-width:100%;width:auto;height:auto;margin:0px;padding:0px;align:center;}
+figcaption{text-align:center;padding:10px;font-size:85%;color:#96989A;}
+img{max-width:100%;height:auto;align:center;border-radius:4px;}
+iframe{width:100%;}
+p,ul{font-size:12px;}
+a:link {font-size:12px;color:#31B057;text-decoration: none;}
+a:visited {font-size:12px;color:#31B057;text-decoration: none;}

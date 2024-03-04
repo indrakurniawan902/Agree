@@ -1,0 +1,69 @@
+dependencies {
+    // Android Frameworks
+    api libs.bundles.android.framework
+    api libs.bundles.android.lifecycle
+
+    //Firebase
+    api platform(libs.android.firebase)
+    api libs.bundles.android.firebase
+
+    //Codebase
+    api platform(libs.telkom.codebase)
+    api (libs.bundles.telkom.codebase) {
+        exclude group: 'com.github.stfalcon', module: 'stfalcon-imageviewer'
+    }
+
+    //Legion
+    api platform(libs.telkom.legion)
+    api dependencies.create(libs.telkom.legion.component.get()) {
+        exclude group: 'androidx.core', module: 'core'
+    }
+    api dependencies.create(libs.telkom.legion.extension.get())  {
+        exclude group: 'androidx.core', module: 'core'
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+    api dependencies.create(libs.telkom.legion.theme.get())  {
+        exclude group: 'androidx.core', module: 'core'
+    }
+
+    // JWT
+    api libs.jwt
+
+    // Kotlin Reflect
+    api libs.bundles.android.kotlin
+
+    // Coroutine and Flow
+    api libs.bundles.coroutine.base
+
+    // Navigation
+    api libs.bundles.android.navigation
+
+    //RxBinding
+    api libs.bundles.rx
+
+    // DotsIndicator
+    api libs.dotsindicator
+
+    //Flexbox
+    api libs.flexbox
+
+    //BlankJ Tool Utility
+    api libs.blankj
+
+    //Locale
+    api libs.bundles.locales
+
+    //Latest Koin Version
+    api libs.bundles.koin
+
+    api "com.github.stfalcon-studio:StfalconImageViewer:1.0.1"
+
+    //Unit Test
+    testApi 'junit:junit:4.13.2'
+    androidTestApi 'androidx.test.ext:junit:1.1.4'
+    androidTestApi 'androidx.test.espresso:espresso-core:3.5.0'
+}
+
+android {
+    namespace 'com.agree.dependencies'
+}

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.menu.finance.cultivator.data.profilefarmer.ProfileCultivatorFragment">
+
+    <com.telkom.legion.component.toolbar.LgnToolbarWhite
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:text="@string/label_title_profile_cultivator"
+        app:contentInsetEnd="@dimen/dimen_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_16dp">
+
+            <com.telkom.legion.component.image.LgnImageView
+                android:id="@+id/ivCultivatorPhoto"
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="@dimen/dimen_60dp"
+                android:radius="@dimen/dimen_8dp"
+                app:cache="AUTOMATIC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvLabelName"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/label_name"
+                android:textAppearance="?attr/captionSmallSemiBold"
+                android:textColor="@color/tertiary_400"
+                app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvValueName"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:ellipsize="end"
+                android:text="@string/label_name"
+                android:textAppearance="?attr/captionLargeRegular"
+                android:textColor="@color/tertiary_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelName" />
+
+            <TextView
+                android:id="@+id/tvLabelNoHp"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/label_no_hp"
+                android:textAppearance="?attr/captionSmallSemiBold"
+                android:textColor="@color/tertiary_400"
+                app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/tvValueName" />
+
+            <TextView
+                android:id="@+id/tvValueNoHp"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:ellipsize="end"
+                android:textAppearance="?attr/captionLargeRegular"
+                android:textColor="@color/tertiary_500"
+                app:layout_constraintStart_toEndOf="@+id/ivCultivatorPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelNoHp"
+                tools:text="0895613383420" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvValueNoHp"
+                tools:layout_editor_absoluteX="16dp">
+
+                <TextView
+                    android:id="@+id/tvLabelAddress"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_address"
+                    android:textAppearance="?attr/captionLargeRegular"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelBornPlace"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvBornDate"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:textAppearance="?attr/captionLargeSemiBold"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelAddress"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelAddress"
+                    tools:text="Indramayu" />
+
+                <TextView
+                    android:id="@+id/tvLabelBornPlace"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_born_date"
+                    android:textAppearance="?attr/captionLargeRegular"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelAddress"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvBornPlace"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:textAppearance="?attr/captionLargeSemiBold"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelBornPlace"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelAddress"
+                    tools:text="10 Jan 1997" />
+
+                <TextView
+                    android:id="@+id/tvLabelNik"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:text="@string/label_nik"
+                    android:textAppearance="?attr/captionLargeRegular"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelEducation"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBornPlace" />
+
+                <TextView
+                    android:id="@+id/tvLabelEducation"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:text="@string/label_gender"
+                    android:textAppearance="?attr/captionLargeRegular"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLabelNik"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBornPlace" />
+
+                <TextView
+                    android:id="@+id/tvValueGender"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:textAppearance="?attr/captionLargeSemiBold"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLabelAddress"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelEducation"
+                    tools:text="Laki-laki" />
+
+                <TextView
+                    android:id="@+id/tvValueNik"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:textAppearance="?attr/captionLargeSemiBold"
+                    android:textColor="@color/tertiary_500"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvValueGender"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLabelEducation"
+                    tools:text="1234567890123456" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListInfoCultivatorItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:clipToPadding="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                tools:layout_editor_absoluteX="16dp"
+                tools:listitem="@layout/item_list_farmer_info" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loanSubmissionCultivatorFragment">
+    <fragment
+        android:id="@+id/loanSubmissionCultivatorFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.loanpackage.applyloan.LoanSubmissionCultivatorFragment"
+        android:label="fragment_loan_submission_cultivator"
+        tools:layout="@layout/fragment_loan_submission_cultivator">
+        <action
+            android:id="@+id/action_loanSubmissionCultivatorFragment_to_loanSubmissionLandFragment"
+            app:destination="@id/loanSubmissionLandFragment" />
+        <argument
+            android:name="detailLoanPackage"
+            android:defaultValue="@null"
+            app:argType="com.agree.ecosystem.finances.domain.reqres.model.DetailLoanPackage"
+            app:nullable="true" />
+        <argument
+            android:name="loanPackageType"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="requiredField"
+            android:defaultValue="@null"
+            app:argType="com.agree.ecosystem.core.utils.domain.reqres.model.FinanceCustomMapData[]"
+            app:nullable="true" />
+        <argument
+            android:name="from"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanSubmissionLandFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.loanpackage.applyloan.LoanSubmissionLandFragment"
+        android:label="fragment_loan_submission_land"
+        tools:layout="@layout/fragment_loan_submission_land">
+        <argument
+            android:name="isFromCollateral"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_loanSubmissionLandFragment_to_loanSubmissionNominalFragment"
+            app:destination="@id/loanSubmissionNominalFragment" />
+        <action
+            android:id="@+id/action_loanSubmissionLandFragment_to_budgetPlanFragment"
+            app:destination="@id/budgetPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanSubmissionNominalFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.loanpackage.applyloan.LoanSubmissionNominalFragment"
+        android:label="fragment_loan_submission_nominal"
+        tools:layout="@layout/fragment_loan_submission_nominal" />
+    <fragment
+        android:id="@+id/budgetPlanFragment"
+        android:name="com.agree.ecosystem.finances.presentation.menu.finance.loanpackage.budgetplan.BudgetPlanFragment"
+        android:label="fragment_budget_plan"
+        tools:layout="@layout/fragment_budget_plan">
+        <argument
+            android:name="planSessionId"
+            app:argType="string" />
+    </fragment>
+</navigation>

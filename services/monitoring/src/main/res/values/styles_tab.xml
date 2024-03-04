@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DetailSubVesselTabs" parent="Tabs">
+        <item name="tabTextAppearance">@style/ButtonLargeSemiBold.DetailSubVesselTabs</item>
+    </style>
+    <style name="ButtonLargeSemiBold.DetailSubVesselTabs" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="ChipTabLayout" parent="Tabs">
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="tabBackground">@drawable/selector_tab</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabIndicatorHeight">@dimen/dimen_0dp</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabGravity">fill</item>
+        <item name="rippleColor">@null</item>
+        <item name="tabTextColor">?attr/colorPrimary500</item>
+        <item name="tabTextAppearance">?attr/bodySmallSemiBold</item>
+    </style>
+</resources>

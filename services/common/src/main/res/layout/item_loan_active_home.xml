@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen_320dp"
+    android:layout_height="@dimen/dimen_140dp"
+    android:layout_marginVertical="@dimen/dimen_16dp"
+    android:layout_marginEnd="@dimen/dimen_16dp"
+    app:cardCornerRadius="@dimen/dimen_4dp"
+    app:cardElevation="@dimen/dimen_0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/grey_100"
+    app:strokeColor="?attr/colorTertiary_100"
+    app:strokeWidth="@dimen/dimen_1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dimen_16dp"
+        android:background="?attr/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_16dp"
+            android:paddingVertical="@dimen/dimen_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvLoanPackageName"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?attr/bodySmallSemiBold"
+                android:textColor="@color/agree_culture_primary_500"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Paket Pinjaman Bank BRI" />
+            <!--
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
+                android:layout_marginStart="@dimen/dimen_37dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLoanPackageName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLoanPackageName"
+                app:layout_constraintTop_toTopOf="@+id/tvLoanPackageName">
+
+                <com.telkom.legion.component.image.LgnImageView
+                    android:id="@+id/imgPhotoCultivator"
+                    android:layout_width="@dimen/dimen_24dp"
+                    android:layout_height="@dimen/dimen_24dp"
+                    android:radius="360dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+
+                <TextView
+                    android:id="@+id/tvMoreCultivaterCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="+5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            -->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.telkom.legion.component.dividers.LgnDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/constraint" />
+
+        <TextView
+            android:id="@+id/tvLabelDateOfSubmission"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:text="@string/label_date_of_submission_loan_active"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="@color/tertiary_500"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint" />
+
+        <TextView
+            android:id="@+id/tvDateOfSubmission"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelDateOfSubmission"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelDateOfSubmission"
+            tools:text="Selasa, 17 Agustus 1945" />
+
+        <TextView
+            android:id="@+id/tvLabelCultivatorOfSubmission"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:text="@string/lbl_borrower_loan_active"
+            android:textAppearance="?attr/captionLargeRegular"
+            android:textColor="@color/tertiary_500"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateOfSubmission" />
+
+        <TextView
+            android:id="@+id/tvCultivatorOfSubmission"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/captionLargeSemiBold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelDateOfSubmission"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelCultivatorOfSubmission"
+            tools:text="Tiana, Udin, Dono" />
+
+        <TextView
+            android:id="@+id/tvMoreCultivatorOfSubmission"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="@string/label_see_more_cultivator"
+            android:textAppearance="?attr/captionSmallSemiBold"
+            android:textColor="?attr/info_700"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCultivatorOfSubmission"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCultivatorOfSubmission"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelCultivatorOfSubmission" />
+
+        <TextView
+            android:id="@+id/tvAnotherCultivator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:textAppearance="@style/CaptionSmallSemiBold"
+            android:textColor="@color/information_600"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCultivatorOfSubmission"
+            app:layout_constraintStart_toEndOf="@+id/tvCultivatorOfSubmission"
+            app:layout_constraintTop_toTopOf="@+id/tvCultivatorOfSubmission"
+            tools:text="Lihat 5 Lainnya" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application>
+        <activity
+            android:name=".presentation.base.activity.activitysop.ActivitySopActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".presentation.base.activity.detailsubvassel.DetailSubVesselActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.base.activity.insertadditionalactivitysop.InsertAdditionalActivitySopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.base.activity.monitoring.MonitoringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.base.activity.settingsoffline.SettingsOfflineMonitoringActivity"
+            android:exported="false" />
+        <activity android:name=".presentation.base.activity.detailactivitysop.DetailActivitySopActivity"
+            android:exported="false" />
+
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data  android:name="${applicationId}.monitoring.di.MonitoringModule"
+                android:value="androidx.startup"/>
+        </provider>
+    </application>
+
+</manifest>

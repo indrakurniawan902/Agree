@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExportableFileTemplateSettings">
+    <default_templates>
+      <template name="DependencyInjection Module.kt" file-name="${NAME}Module" reformat="true" live-template-enabled="false" />
+      <template name="DependencyInjection Pattern.kt" file-name="${NAME}Module" reformat="true" live-template-enabled="false">
+        <template name="DependencyInjection Pattern.kt.child.0.kt" file-name="ViewModelModule" reformat="true" live-template-enabled="false" />
+      </template>
+      <template name="DependencyInjection Pattern.kt.child.0.kt" file-name="ViewModelModule" reformat="true" live-template-enabled="false" />
+      <template name="Repository Pattern.kt" file-name="${NAME}DataStore" reformat="true" live-template-enabled="false">
+        <template name="Repository Pattern.kt.child.0.kt" file-name="${NAME}Repository" reformat="true" live-template-enabled="false" />
+      </template>
+      <template name="Repository Pattern.kt.child.0.kt" file-name="${NAME}Repository" reformat="true" live-template-enabled="false" />
+      <template name="Usecase Pattern.kt" file-name="${NAME}Interactor" reformat="true" live-template-enabled="false">
+        <template name="Usecase Pattern.kt.child.0.kt" file-name="${NAME}Usecase" reformat="true" live-template-enabled="false" />
+      </template>
+      <template name="Usecase Pattern.kt.child.0.kt" file-name="${NAME}Usecase" reformat="true" live-template-enabled="false" />
+    </default_templates>
+  </component>
+</project>

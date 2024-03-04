@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/dimen_48dp"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_200dp"
+        android:src="@drawable/ic_sad"/>
+
+    <TextView
+        android:id="@+id/tvTitleEmptyListVessel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/label_title_empty_list_vessel"
+        android:textAlignment="center"
+        android:textAppearance="?attr/bodySmallBold"/>
+
+    <TextView
+        android:id="@+id/tvDescEmptyListVessel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/label_description_empty_list_sub_vessel"
+        android:textAlignment="center"
+        android:textAppearance="@style/CaptionLargeRegular"/>
+
+    <com.telkom.legion.component.button.fill.LgnPrimaryFitButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/label_register_new_partnership"/>
+</LinearLayout>
